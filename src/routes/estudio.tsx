@@ -13,28 +13,38 @@ export const Route = createFileRoute("/estudio")({
       {
         name: "description",
         content:
-          "AMBOSS diseño y soluciones SAS — Un estudio de arquitectura enfocado en la vanguardia, la simplicidad y la sofisticación.",
+          "AMBOSS Diseños y Soluciones Integrales SAS. Arquitectos especializados en diseño, construcción y soluciones integrales.",
       },
       { property: "og:title", content: "Estudio · AMBOSS Arquitectos" },
-      { property: "og:description", content: "Filosofía, equipo y alianza con LIIT." },
+      { property: "og:description", content: "Misión, visión y forma de trabajo de AMBOSS." },
     ],
   }),
   component: EstudioPage,
 });
 
-const timeline = [
-  { year: "2015", title: "Fundación", desc: "AMBOSS inicia operaciones en Bogotá con un equipo de tres arquitectos." },
-  { year: "2018", title: "Primer proyecto institucional", desc: "Centro cultural en Cali — primer reconocimiento en bienal." },
-  { year: "2021", title: "Alianza con LIIT", desc: "Se formaliza la relación con LIIT, sumando capacidades constructivas." },
-  { year: "2023", title: "Expansión", desc: "Apertura de oficina satélite, proyectos en tres países." },
-  { year: "2025", title: "Hoy", desc: "Más de 40 obras entregadas. Continuamos buscando el detalle." },
+const principles = [
+  {
+    n: "01",
+    title: "Misión",
+    desc: "Ofrecer soluciones integrales que se ajusten a las necesidades particulares de cada proyecto, con calidad, criterio técnico y trato profesional.",
+  },
+  {
+    n: "02",
+    title: "Visión",
+    desc: "Consolidarnos como una compañía líder en diseño y construcción de proyectos comerciales, siendo una solución confiable para pequeñas y grandes empresas.",
+  },
+  {
+    n: "03",
+    title: "Método",
+    desc: "Unir diseño, obra, documentación, trámites y visualización para que el proyecto avance con claridad desde la planeación hasta la entrega.",
+  },
 ];
 
 const team = [
-  { name: "—", role: "Director de diseño" },
-  { name: "—", role: "Dirección de proyectos" },
-  { name: "—", role: "Coordinación de obra" },
-  { name: "—", role: "Interiorismo" },
+  { name: "Diseño integral", role: "Espacios funcionales" },
+  { name: "Obra civil", role: "Construcción y reforma" },
+  { name: "Legalización", role: "Trámite ante entidades" },
+  { name: "BIM y 3D", role: "Documentación visual" },
 ];
 
 function EstudioPage() {
@@ -43,13 +53,13 @@ function EstudioPage() {
       {/* HERO */}
       <section className="relative mx-auto max-w-[1600px] px-6 pb-20 pt-40 md:px-10 md:pb-32 md:pt-48">
         <SectionNumber n="00" label="El estudio" />
-        <h1 className="mt-8 max-w-4xl font-display text-5xl leading-[1.02] tracking-wide md:text-8xl">
-          <span className="block overflow-hidden">
-            <span className="wall-reveal block">Una práctica</span>
+        <h1 className="hero-title mt-8 max-w-4xl">
+          <span className="reveal-line">
+            <span className="wall-reveal block">Arquitectura</span>
           </span>
-          <span className="block overflow-hidden">
+          <span className="reveal-line">
             <span className="wall-reveal block text-primary" style={{ animationDelay: ".15s" }}>
-              de la materia.
+              que resuelve.
             </span>
           </span>
         </h1>
@@ -72,24 +82,23 @@ function EstudioPage() {
         <div className="mt-10 md:col-span-5 md:mt-0">
           <WallReveal>
             <p className="text-lg leading-relaxed text-foreground md:text-xl">
-              Entendemos la arquitectura como un proceso lento y deliberado.
-              Cada proyecto nace de una conversación con el lugar, el cliente
-              y la materia.
+              Somos una compañía de arquitectos que presta servicios de diseño, construcción y
+              soluciones integrales para materializar proyectos con orden, funcionalidad y respaldo
+              técnico.
             </p>
           </WallReveal>
           <WallReveal delay={0.1}>
             <p className="mt-6 text-sm leading-relaxed text-muted-foreground">
-              No diseñamos formas: diseñamos atmósferas. Trabajamos con un
-              vocabulario reducido — concreto, madera, acero, vidrio, luz —
-              para que la experiencia del espacio sea siempre más rica que
-              cualquier referencia gráfica.
+              Nuestro propósito es entender las necesidades del cliente, traducirlas en espacios
+              claros y coordinar las especialidades que intervienen en una obra: estructura, redes,
+              instalaciones, acabados y documentación.
             </p>
           </WallReveal>
           <dl className="mt-12 grid grid-cols-3 gap-6 border-t border-border pt-8">
             {[
-              { k: "+40", v: "Obras entregadas" },
-              { k: "10", v: "Años de trayectoria" },
-              { k: "3", v: "Países" },
+              { k: "360°", v: "Proceso integral" },
+              { k: "BIM", v: "Modelado técnico" },
+              { k: "BGA", v: "Base local" },
             ].map((s) => (
               <div key={s.v}>
                 <dt className="font-display text-3xl text-primary md:text-5xl">{s.k}</dt>
@@ -102,17 +111,17 @@ function EstudioPage() {
         </div>
       </section>
 
-      {/* TIMELINE */}
+      {/* PRINCIPIOS */}
       <section className="relative mx-auto max-w-[1600px] px-6 py-28 md:px-10 md:py-32">
-        <SectionNumber n="01" label="Trayectoria" />
+        <SectionNumber n="01" label="Misión y visión" />
         <h2 className="mt-6 max-w-2xl font-display text-4xl leading-tight tracking-wide md:text-6xl">
-          Una década <span className="text-primary">construyendo.</span>
+          Una forma clara de <span className="text-primary">acompañar.</span>
         </h2>
 
         <ol className="mt-16 space-y-0 border-l border-border">
-          {timeline.map((t, i) => (
+          {principles.map((t, i) => (
             <motion.li
-              key={t.year}
+              key={t.n}
               initial={{ opacity: 0, x: -40 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true, margin: "-60px" }}
@@ -121,7 +130,7 @@ function EstudioPage() {
             >
               <span className="absolute -left-[5px] top-12 h-2.5 w-2.5 rotate-45 bg-primary" />
               <span className="col-span-3 font-display text-sm tracking-[0.3em] text-primary md:col-span-2 md:text-base">
-                {t.year}
+                {t.n}
               </span>
               <span className="col-span-9 font-display text-2xl tracking-wide text-foreground md:col-span-4 md:text-3xl">
                 {t.title}
@@ -134,11 +143,11 @@ function EstudioPage() {
         </ol>
       </section>
 
-      {/* EQUIPO */}
+      {/* CAPACIDADES */}
       <section className="mx-auto max-w-[1600px] px-6 py-28 md:px-10">
-        <SectionNumber n="02" label="Equipo" />
+        <SectionNumber n="02" label="Capacidades" />
         <h2 className="mt-6 font-display text-4xl tracking-wide md:text-6xl">
-          Un equipo <span className="text-primary">multidisciplinario.</span>
+          Soluciones <span className="text-primary">coordinadas.</span>
         </h2>
 
         <ul className="mt-16 grid grid-cols-2 gap-px overflow-hidden border border-border bg-border md:grid-cols-4">

@@ -12,16 +12,23 @@ export const Route = createFileRoute("/proyectos")({
       {
         name: "description",
         content:
-          "Portafolio de obras de AMBOSS: residencial, comercial, institucional e interiorismo.",
+          "Portafolio real de AMBOSS: proyectos comerciales, residenciales, inmobiliarios, corporativos, industriales y obra civil.",
       },
       { property: "og:title", content: "Proyectos · AMBOSS Arquitectos" },
-      { property: "og:description", content: "Portafolio completo de obras." },
+      { property: "og:description", content: "Proyectos reales desarrollados por AMBOSS." },
     ],
   }),
   component: ProyectosPage,
 });
 
-const cats = ["Todos", "Residencial", "Comercial", "Institucional", "Interiorismo"] as const;
+const cats = [
+  "Todos",
+  "Comercial",
+  "Residencial",
+  "Inmobiliario",
+  "Obra civil",
+  "Alianza",
+] as const;
 
 function ProyectosPage() {
   const [filter, setFilter] = useState<(typeof cats)[number]>("Todos");
@@ -34,20 +41,20 @@ function ProyectosPage() {
   return (
     <>
       <section className="mx-auto max-w-[1600px] px-6 pb-12 pt-40 md:px-10 md:pt-48">
-        <SectionNumber n="—" label="Portafolio" />
-        <h1 className="mt-8 font-display text-5xl leading-[1.02] tracking-wide md:text-8xl">
-          <span className="block overflow-hidden">
-            <span className="wall-reveal block">Obra</span>
+        <SectionNumber n="—" label="Portafolio real" />
+        <h1 className="hero-title mt-8">
+          <span className="reveal-line">
+            <span className="wall-reveal block">Proyectos</span>
           </span>
-          <span className="block overflow-hidden">
+          <span className="reveal-line">
             <span className="wall-reveal block text-primary" style={{ animationDelay: ".15s" }}>
-              construida.
+              reales.
             </span>
           </span>
         </h1>
         <p className="mt-8 max-w-2xl text-base text-muted-foreground md:text-lg">
-          Una selección de proyectos donde el lugar, la materia y el detalle
-          son los protagonistas.
+          Una selección de proyectos reales donde AMBOSS aporta diseño, construcción, reforma,
+          legalización, visualización y documentación técnica.
         </p>
       </section>
 
@@ -71,7 +78,7 @@ function ProyectosPage() {
             </button>
           ))}
           <span className="ml-auto text-[10px] uppercase tracking-[0.3em] text-muted-foreground">
-            {String(list.length).padStart(2, "0")} obras
+            {String(list.length).padStart(2, "0")} registros
           </span>
         </div>
       </section>

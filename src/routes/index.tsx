@@ -12,35 +12,55 @@ import { LiitBand } from "@/components/site/LiitBand";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "AMBOSS Arquitectos · Estudio de arquitectura contemporánea" },
+      { title: "AMBOSS Arquitectos · Diseño y soluciones integrales" },
       {
         name: "description",
         content:
-          "AMBOSS diseño y soluciones SAS — Arquitectura, interiorismo y consultoría. Espacios que son obras de arte habitables.",
+          "AMBOSS Diseños y Soluciones Integrales SAS. Diseño, construcción, reformas, legalización, visualización, planimetría, modelado 3D y BIM.",
       },
       { property: "og:title", content: "AMBOSS Arquitectos" },
-      { property: "og:description", content: "Estudio de arquitectura contemporánea con sede en Bogotá." },
+      {
+        property: "og:description",
+        content: "Arquitectura y soluciones integrales con sede en Bucaramanga.",
+      },
     ],
   }),
   component: HomePage,
 });
 
 const manifesto = [
-  "Materia",
-  "Silencio",
-  "Luz",
-  "Estructura",
-  "Vacío",
-  "Forma",
-  "Paisaje",
+  "Diseño",
+  "Obra",
+  "Función",
+  "Legalización",
+  "BIM",
   "Detalle",
+  "Estructura",
+  "Espacio",
 ];
 
 const services = [
-  { n: "01", title: "Diseño arquitectónico", desc: "Vivienda, comercial e institucional." },
-  { n: "02", title: "Interiorismo", desc: "Espacios habitables, atmósfera y materia." },
-  { n: "03", title: "Consultoría", desc: "Asesoría de proyecto, viabilidad y normativa." },
-  { n: "04", title: "Gerencia de obra", desc: "Coordinación integral, tiempo, costo y calidad." },
+  { n: "01", title: "Diseño integral", desc: "Oficinas, locales, vivienda y cadenas comerciales." },
+  {
+    n: "02",
+    title: "Construcción y reforma",
+    desc: "Obras civiles con coordinación técnica integral.",
+  },
+  {
+    n: "03",
+    title: "Legalización de proyectos",
+    desc: "Trámites ante entidades y acompañamiento documental.",
+  },
+  {
+    n: "04",
+    title: "Visualización inmobiliaria",
+    desc: "Factibilidad, parcelación y comunicación visual del proyecto.",
+  },
+  {
+    n: "05",
+    title: "Planimetría y modelado",
+    desc: "Planos, modelos 3D e implementación de metodología BIM.",
+  },
 ];
 
 function HomePage() {
@@ -52,7 +72,7 @@ function HomePage() {
       <section className="relative h-[100svh] min-h-[640px] w-full overflow-hidden">
         <img
           src={hero}
-          alt="Arquitectura contemporánea AMBOSS"
+          alt="Arquitectura y soluciones integrales AMBOSS"
           width={1920}
           height={1280}
           className="absolute inset-0 h-full w-full object-cover"
@@ -70,8 +90,8 @@ function HomePage() {
 
         <div className="relative z-10 mx-auto flex h-full max-w-[1600px] flex-col justify-between px-6 pb-12 pt-32 md:px-10">
           <div className="flex items-center justify-between text-[10px] uppercase tracking-[0.35em] text-muted-foreground">
-            <span>EST. — BOGOTÁ</span>
-            <span className="hidden md:inline">N 4°42′ · W 74°4′</span>
+            <span>Bucaramanga · Colombia</span>
+            <span className="hidden md:inline">Diseños y soluciones integrales SAS</span>
           </div>
 
           <div>
@@ -81,27 +101,24 @@ function HomePage() {
               transition={{ duration: 0.8, delay: 0.2 }}
               className="mb-8 text-[10px] uppercase tracking-[0.35em] text-primary"
             >
-              Diseño y soluciones / 2025
+              Arquitectura · construcción · BIM
             </motion.p>
 
-            <h1 className="font-display text-[clamp(3rem,9vw,9rem)] leading-[0.95] tracking-tight text-foreground">
-              <span className="block overflow-hidden">
-                <span className="wall-reveal block">Arquitectura</span>
+            <h1 className="hero-title text-foreground">
+              <span className="reveal-line">
+                <span className="wall-reveal block">Diseño</span>
               </span>
-              <span className="block overflow-hidden">
+              <span className="reveal-line">
                 <span
                   className="wall-reveal block text-primary"
                   style={{ animationDelay: "0.15s" }}
                 >
-                  como obra
+                  y obra
                 </span>
               </span>
-              <span className="block overflow-hidden">
-                <span
-                  className="wall-reveal block"
-                  style={{ animationDelay: "0.3s" }}
-                >
-                  de arte.
+              <span className="reveal-line">
+                <span className="wall-reveal block" style={{ animationDelay: "0.3s" }}>
+                  integral.
                 </span>
               </span>
             </h1>
@@ -113,10 +130,8 @@ function HomePage() {
               className="mt-10 flex flex-col items-start gap-8 md:flex-row md:items-end md:justify-between"
             >
               <p className="max-w-md text-sm leading-relaxed text-muted-foreground md:text-base">
-                Estudio contemporáneo que busca la excelencia desde la
-                simplicidad. Diseñamos espacios precisos, materiales y
-                duraderos — junto a nuestra empresa hermana{" "}
-                <span className="text-primary">LIIT</span>.
+                Somos una compañía de arquitectos enfocada en diseño, construcción y soluciones
+                integrales para proyectos comerciales, residenciales e inmobiliarios.
               </p>
               <div className="flex gap-3">
                 <Link
@@ -172,26 +187,27 @@ function HomePage() {
             <SectionNumber n="01" label="Estudio" />
             <WallReveal>
               <h2 className="mt-8 font-display text-3xl leading-tight tracking-wide md:text-4xl">
-                Vanguardia,<br />simplicidad,<br /><span className="text-primary">precisión.</span>
+                Diseño,
+                <br />
+                obra,
+                <br />
+                <span className="text-primary">solución.</span>
               </h2>
             </WallReveal>
           </div>
           <div className="md:col-span-7 md:col-start-6">
             <WallReveal delay={0.1}>
               <p className="text-lg leading-relaxed text-foreground md:text-2xl">
-                AMBOSS representa la búsqueda constante de la excelencia y la
-                innovación en arquitectura. Una marca que inspira confianza y
-                transmite el mensaje de un estudio que está a la vanguardia,
-                creando espacios que son verdaderas obras de arte.
+                En AMBOSS desarrollamos soluciones arquitectónicas ajustadas a las necesidades
+                reales de cada proyecto, con criterio técnico, servicio profesional y una visión
+                integral del proceso.
               </p>
             </WallReveal>
             <WallReveal delay={0.2}>
               <p className="mt-6 max-w-2xl text-sm leading-relaxed text-muted-foreground">
-                Trabajamos con un enfoque minimalista, caracterizado por la
-                simplicidad y la sofisticación. Una paleta sobria de negros,
-                grises y verdes que transmite seriedad y profesionalismo, con
-                detalles gráficos sutiles que aportan estilo sin comprometer
-                la claridad del diseño.
+                Acompañamos desde la idea inicial hasta la construcción, reforma, legalización,
+                visualización y documentación técnica. Nuestro trabajo busca espacios funcionales,
+                claros y coherentes con los objetivos del cliente.
               </p>
             </WallReveal>
             <WallReveal delay={0.3}>
@@ -212,10 +228,11 @@ function HomePage() {
         <div className="mx-auto max-w-[1600px] px-6 md:px-10">
           <div className="mb-16 flex items-end justify-between gap-6">
             <div>
-              <SectionNumber n="02" label="Obra reciente" />
+              <SectionNumber n="02" label="Portafolio" />
               <h2 className="mt-6 font-display text-4xl leading-tight tracking-wide md:text-6xl">
-                Proyectos<br />
-                <span className="text-primary">destacados.</span>
+                Proyectos
+                <br />
+                <span className="text-primary">reales.</span>
               </h2>
             </div>
             <Link
@@ -239,7 +256,7 @@ function HomePage() {
       <section className="relative mx-auto max-w-[1600px] px-6 py-28 md:px-10 md:py-40">
         <SectionNumber n="03" label="Servicios" />
         <h2 className="mt-6 max-w-3xl font-display text-4xl leading-tight tracking-wide md:text-6xl">
-          Cuatro disciplinas, <span className="text-primary">una visión.</span>
+          Un equipo para resolver <span className="text-primary">todo el proceso.</span>
         </h2>
 
         <ul className="mt-16 divide-y divide-border border-y border-border">

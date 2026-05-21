@@ -75,9 +75,9 @@ function ProjectDetail() {
 
           <div className="mt-10 grid gap-10 md:grid-cols-12">
             <div className="md:col-span-8">
-              <SectionNumber n={project.category.toUpperCase()} label={project.year} />
-              <h1 className="mt-6 font-display text-5xl leading-[1.02] tracking-wide md:text-8xl">
-                <span className="block overflow-hidden">
+              <SectionNumber n={project.category.toUpperCase()} label={project.sector} />
+              <h1 className="hero-title mt-6">
+                <span className="reveal-line">
                   <span className="wall-reveal block">{project.title}</span>
                 </span>
               </h1>
@@ -92,9 +92,9 @@ function ProjectDetail() {
                 </div>
                 <div>
                   <dt className="text-[10px] uppercase tracking-[0.25em] text-muted-foreground">
-                    Área
+                    Alcance
                   </dt>
-                  <dd className="mt-2 text-foreground">{project.area}</dd>
+                  <dd className="mt-2 text-foreground">{project.scope}</dd>
                 </div>
                 <div>
                   <dt className="text-[10px] uppercase tracking-[0.25em] text-muted-foreground">
@@ -104,20 +104,25 @@ function ProjectDetail() {
                 </div>
                 <div>
                   <dt className="text-[10px] uppercase tracking-[0.25em] text-muted-foreground">
-                    Año
+                    Sector
                   </dt>
-                  <dd className="mt-2 text-foreground">{project.year}</dd>
+                  <dd className="mt-2 text-foreground">{project.sector}</dd>
                 </div>
-                {project.withLiit && (
-                  <div className="col-span-2">
-                    <dt className="text-[10px] uppercase tracking-[0.25em] text-muted-foreground">
-                      Colaboración
-                    </dt>
-                    <dd className="mt-2 inline-flex items-center gap-2 border border-primary/50 px-3 py-1 text-xs tracking-[0.3em] text-primary">
-                      + LIIT
-                    </dd>
-                  </div>
-                )}
+                <div className="col-span-2">
+                  <dt className="text-[10px] uppercase tracking-[0.25em] text-muted-foreground">
+                    Servicios
+                  </dt>
+                  <dd className="mt-2 flex flex-wrap gap-2">
+                    {project.services.map((service) => (
+                      <span
+                        key={service}
+                        className="border border-primary/50 px-3 py-1 text-xs tracking-[0.2em] text-primary"
+                      >
+                        {service}
+                      </span>
+                    ))}
+                  </dd>
+                </div>
               </dl>
             </div>
           </div>
@@ -148,11 +153,11 @@ function ProjectDetail() {
         </div>
       </section>
 
-      {/* PLANOS — SVG con blueprint-draw */}
+      {/* GALERIA */}
       <section className="mx-auto max-w-[1600px] border-y border-border bg-secondary px-6 py-24 md:px-10 md:py-32">
-        <SectionNumber n="02" label="Planimetría" />
+        <SectionNumber n="02" label="Galería" />
         <h2 className="mt-6 font-display text-3xl tracking-wide md:text-5xl">
-          Trazado <span className="text-primary">técnico.</span>
+          Imágenes <span className="text-primary">del proyecto.</span>
         </h2>
 
         <motion.div
@@ -160,34 +165,23 @@ function ProjectDetail() {
           whileInView={{ opacity: 1 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.8 }}
-          className="mt-12 grid gap-8 md:grid-cols-2"
+          className="mt-12 grid gap-6 md:grid-cols-3 md:gap-8"
         >
-          {[0, 1].map((k) => (
-            <div key={k} className="tick-corners relative border border-border bg-background p-6">
-              <p className="mb-4 text-[10px] uppercase tracking-[0.3em] text-muted-foreground">
-                Planta {k === 0 ? "primer" : "segundo"} nivel
-              </p>
-              <svg
-                viewBox="0 0 400 280"
-                className="blueprint-draw w-full text-primary"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="1"
-              >
-                <rect x="20" y="20" width="360" height="240" />
-                <line x1="20" y1="130" x2="380" y2="130" />
-                <line x1="180" y1="20" x2="180" y2="260" />
-                <line x1="180" y1="180" x2="280" y2="180" />
-                <rect x="40" y="40" width="120" height="70" strokeDasharray="4 4" />
-                <rect x="210" y="40" width="150" height="70" />
-                <rect x="40" y="150" width="120" height="90" />
-                <rect x="210" y="200" width="150" height="40" />
-                <circle cx="320" cy="155" r="10" />
-                <line x1="20" y1="270" x2="380" y2="270" strokeWidth="0.5" />
-                <line x1="20" y1="265" x2="20" y2="275" strokeWidth="0.5" />
-                <line x1="380" y1="265" x2="380" y2="275" strokeWidth="0.5" />
-              </svg>
-            </div>
+          {project.gallery.map((image, i) => (
+            <figure
+              key={image}
+              className="tick-corners overflow-hidden border border-border bg-card"
+            >
+              <img
+                src={image}
+                alt={`${project.title} ${i + 1}`}
+                loading="lazy"
+                className="aspect-[4/3] w-full object-cover grayscale-[12%]"
+              />
+              <figcaption className="border-t border-border px-5 py-4 text-[10px] uppercase tracking-[0.3em] text-muted-foreground">
+                Vista {String(i + 1).padStart(2, "0")}
+              </figcaption>
+            </figure>
           ))}
         </motion.div>
       </section>
@@ -236,7 +230,7 @@ function RelatedCard({ p, i }: { p: ReturnType<typeof projects.slice>[number]; i
         <div className="flex items-baseline justify-between gap-4 border-t border-border p-5">
           <div>
             <p className="text-[10px] uppercase tracking-[0.3em] text-muted-foreground">
-              {p.category} · {p.year}
+              {p.category} · {p.scope}
             </p>
             <h3 className="mt-1 font-display text-lg tracking-wide">{p.title}</h3>
           </div>

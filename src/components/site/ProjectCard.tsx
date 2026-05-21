@@ -20,11 +20,7 @@ export function ProjectCard({ project, index = 0, priority }: Props) {
       viewport={{ once: true, margin: "-60px" }}
       transition={{ duration: 0.8, delay: (index % 3) * 0.08, ease: [0.65, 0, 0.35, 1] }}
     >
-      <Link
-        to="/proyectos/$slug"
-        params={{ slug: project.slug }}
-        className="group block"
-      >
+      <Link to="/proyectos/$slug" params={{ slug: project.slug }} className="group block">
         <div className="relative overflow-hidden border border-border bg-card">
           <div className="relative aspect-[4/5] overflow-hidden">
             <img
@@ -67,7 +63,7 @@ export function ProjectCard({ project, index = 0, priority }: Props) {
                   fontSize="8"
                   letterSpacing="2"
                 >
-                  {project.area.toUpperCase()}
+                  {project.scope.toUpperCase()}
                 </text>
               </svg>
 
@@ -78,17 +74,15 @@ export function ProjectCard({ project, index = 0, priority }: Props) {
               </div>
             </div>
 
-            {project.withLiit && (
-              <span className="absolute right-4 top-4 z-10 border border-primary/60 bg-background/70 px-2 py-1 text-[9px] uppercase tracking-[0.3em] text-primary backdrop-blur">
-                + LIIT
-              </span>
-            )}
+            <span className="absolute right-4 top-4 z-10 border border-primary/60 bg-background/70 px-2 py-1 text-[9px] uppercase tracking-[0.3em] text-primary backdrop-blur">
+              {project.sector}
+            </span>
           </div>
 
           <div className="flex items-baseline justify-between gap-4 border-t border-border p-5">
             <div>
               <p className="text-[10px] uppercase tracking-[0.3em] text-muted-foreground">
-                {project.category} · {project.year}
+                {project.category} · {project.scope}
               </p>
               <h3 className="mt-1 font-display text-lg tracking-wide text-foreground">
                 {project.title}

@@ -12,10 +12,13 @@ export const Route = createFileRoute("/servicios")({
       {
         name: "description",
         content:
-          "Diseño arquitectónico, interiorismo, consultoría y gerencia de obra. Servicios integrales de AMBOSS y LIIT.",
+          "Diseño integral, construcción de obras civiles, reformas, legalización, visualización inmobiliaria, planimetría, modelado 3D y BIM.",
       },
       { property: "og:title", content: "Servicios · AMBOSS Arquitectos" },
-      { property: "og:description", content: "Cuatro disciplinas, una visión integral." },
+      {
+        property: "og:description",
+        content: "Servicios integrales para proyectos comerciales, residenciales e inmobiliarios.",
+      },
     ],
   }),
   component: ServiciosPage,
@@ -24,51 +27,58 @@ export const Route = createFileRoute("/servicios")({
 const services = [
   {
     n: "01",
-    title: "Diseño arquitectónico",
-    short: "Vivienda · Comercial · Institucional",
-    items: [
-      "Anteproyecto y diseño esquemático",
-      "Diseño de detalle y especificaciones",
-      "Modelado 3D y visualización",
-      "Coordinación con especialistas",
-    ],
-    desc: "Desde el primer trazo hasta los detalles constructivos, nuestro trabajo busca la precisión de la materia y la economía de la forma. Cada proyecto se desarrolla en estrecho diálogo con el cliente, el lugar y el uso.",
+    title: "Diseño integral",
+    short: "Oficinas · Locales · Vivienda",
+    items: ["Oficinas", "Locales comerciales", "Espacios residenciales", "Cadenas comerciales"],
+    desc: "Diseñamos espacios acordes con los requerimientos del cliente, cuidando funcionalidad, iluminación, circulación y una experiencia coherente con el uso del proyecto.",
   },
   {
     n: "02",
-    title: "Interiorismo",
-    short: "Atmósfera · Materia · Mobiliario",
+    title: "Construcción de obras civiles",
+    short: "Construcción · Reforma · Coordinación",
     items: [
-      "Diseño integral de interiores",
-      "Selección y desarrollo de mobiliario",
-      "Iluminación arquitectónica",
-      "Curaduría de materiales y acabados",
+      "Especialidad estructural",
+      "Redes eléctricas",
+      "Redes sanitarias e hidráulicas",
+      "Redes contraincendios",
     ],
-    desc: "Diseñamos interiores como espacios habitables y atmósferas precisas. La luz, la textura y la escala son tan importantes como cualquier objeto, porque definen cómo se vive el espacio.",
+    desc: "Desarrollamos construcción y reforma de obras civiles integrales, articulando las especialidades técnicas que intervienen en el proyecto para lograr una ejecución ordenada.",
   },
   {
     n: "03",
-    title: "Consultoría",
-    short: "Viabilidad · Normativa · Estrategia",
+    title: "Trámite y legalización",
+    short: "Entidades · Documentación · Gestión",
     items: [
-      "Estudios de viabilidad y prefactibilidad",
-      "Asesoría normativa y de licencias",
-      "Programación y dimensionamiento",
-      "Optimización de proyectos existentes",
+      "Revisión de requerimientos",
+      "Preparación documental",
+      "Acompañamiento ante entidades",
+      "Seguimiento del proceso",
     ],
-    desc: "Acompañamos a clientes y otros estudios en las primeras etapas: cuando una idea aún es pregunta. Aportamos criterio, experiencia y rigor técnico para decisiones bien informadas.",
+    desc: "Acompañamos el trámite y la legalización de proyectos ante entidades, con una gestión clara de documentos, requisitos y pasos necesarios para avanzar.",
   },
   {
     n: "04",
-    title: "Gerencia de obra",
-    short: "Coordinación integral con LIIT",
+    title: "Visualización inmobiliaria",
+    short: "Factibilidad · Parcelación · Presentación",
     items: [
-      "Programación y control de obra",
-      "Coordinación de proveedores y contratistas",
-      "Control de calidad y costos",
-      "Cierre técnico y entrega",
+      "Análisis de factibilidad",
+      "Parcelación",
+      "Visualización de proyectos",
+      "Material para presentación comercial",
     ],
-    desc: "Junto a nuestra empresa hermana LIIT, integramos diseño y construcción en un solo equipo. Esto reduce fricciones, acorta tiempos y asegura que lo construido respete lo proyectado.",
+    desc: "Estudiamos y comunicamos proyectos inmobiliarios para facilitar su comprensión técnica, espacial y comercial antes de su desarrollo.",
+  },
+  {
+    n: "05",
+    title: "Planimetría, 3D y BIM",
+    short: "Planos · Modelado · Metodología BIM",
+    items: [
+      "Elaboración de planimetrías",
+      "Modelado 3D",
+      "Implementación de metodología BIM",
+      "Coordinación gráfica y técnica",
+    ],
+    desc: "Convertimos ideas y diseños en documentación clara: planos, modelos tridimensionales y flujos BIM que apoyan la toma de decisiones y la ejecución.",
   },
 ];
 
@@ -79,24 +89,24 @@ function ServiciosPage() {
     <>
       <section className="mx-auto max-w-[1600px] px-6 pb-16 pt-40 md:px-10 md:pt-48">
         <SectionNumber n="—" label="Qué hacemos" />
-        <h1 className="mt-8 max-w-5xl font-display text-5xl leading-[1.02] tracking-wide md:text-8xl">
-          <span className="block overflow-hidden">
+        <h1 className="hero-title mt-8 max-w-5xl">
+          <span className="reveal-line">
             <span className="wall-reveal block">Diseño,</span>
           </span>
-          <span className="block overflow-hidden">
+          <span className="reveal-line">
             <span className="wall-reveal block" style={{ animationDelay: ".1s" }}>
-              materia y
+              obra y
             </span>
           </span>
-          <span className="block overflow-hidden">
+          <span className="reveal-line">
             <span className="wall-reveal block text-primary" style={{ animationDelay: ".2s" }}>
-              construcción.
+              soluciones.
             </span>
           </span>
         </h1>
         <p className="mt-10 max-w-2xl text-base text-muted-foreground md:text-lg">
-          Cuatro disciplinas que operan como un sistema integrado. Puedes
-          contratarlas por separado o como un solo proceso de principio a fin.
+          Servicios pensados para acompañar el proyecto desde la planeación hasta la construcción,
+          la legalización y la documentación técnica.
         </p>
       </section>
 

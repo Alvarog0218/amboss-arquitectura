@@ -2,6 +2,8 @@ import { Link, useLocation } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
 import { Menu, X } from "lucide-react";
 
+import logoMark from "@/assets/A.png";
+
 const links = [
   { to: "/", label: "Inicio" },
   { to: "/estudio", label: "Estudio" },
@@ -37,11 +39,12 @@ export function Nav() {
       <div className="mx-auto flex h-16 max-w-[1600px] items-center justify-between px-6 md:px-10">
         <Link
           to="/"
-          className="flex items-baseline gap-2 font-display text-sm tracking-[0.35em] text-foreground"
+          className="flex items-center gap-3 font-display text-sm tracking-[0.35em] text-foreground"
         >
+          <img src={logoMark} alt="AMBOSS" className="h-9 w-9 object-contain" />
           <span className="text-base">AMBOSS</span>
           <span className="hidden text-[10px] text-muted-foreground sm:inline">
-            / ARQUITECTOS
+            / SOLUCIONES INTEGRALES
           </span>
         </Link>
 
@@ -81,13 +84,8 @@ export function Nav() {
                   className="overflow-hidden"
                   style={{ animation: `wall-reveal .6s ${i * 0.06}s both` }}
                 >
-                  <Link
-                    to={l.to}
-                    className="font-display text-2xl tracking-widest text-foreground"
-                  >
-                    <span className="mr-3 text-[10px] text-muted-foreground">
-                      0{i + 1}
-                    </span>
+                  <Link to={l.to} className="font-display text-2xl tracking-widest text-foreground">
+                    <span className="mr-3 text-[10px] text-muted-foreground">0{i + 1}</span>
                     {l.label}
                   </Link>
                 </li>

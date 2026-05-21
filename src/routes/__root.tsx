@@ -45,9 +45,7 @@ function ErrorComponent({ error, reset }: { error: Error; reset: () => void }) {
   return (
     <div className="flex min-h-screen items-center justify-center bg-background px-4">
       <div className="max-w-md text-center">
-        <h1 className="font-display text-xl tracking-wide text-foreground">
-          Esta página no cargó
-        </h1>
+        <h1 className="font-display text-xl tracking-wide text-foreground">Esta página no cargó</h1>
         <p className="mt-2 text-sm text-muted-foreground">
           Algo salió mal. Puedes reintentar o volver al inicio.
         </p>
@@ -82,13 +80,13 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       {
         name: "description",
         content:
-          "Estudio de arquitectura contemporánea. Diseño, interiorismo y soluciones constructivas. Empresa hermana de LIIT.",
+          "AMBOSS Diseños y Soluciones Integrales SAS. Diseño arquitectónico, construcción, reformas, legalización, visualización, planimetría, modelado 3D y BIM en Bucaramanga.",
       },
-      { name: "author", content: "AMBOSS Arquitectos" },
+      { name: "author", content: "AMBOSS Diseños y Soluciones Integrales SAS" },
       { property: "og:title", content: "AMBOSS Arquitectos" },
       {
         property: "og:description",
-        content: "Estudio de arquitectura contemporánea. Diseño, interiorismo y soluciones constructivas.",
+        content: "Soluciones integrales para proyectos comerciales, residenciales e inmobiliarios.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },

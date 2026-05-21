@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
-import { ArrowUpRight, Instagram, Mail, MapPin } from "lucide-react";
+import { ArrowUpRight, Instagram, Mail, MapPin, Phone } from "lucide-react";
 
 import { SectionNumber } from "@/components/site/SectionNumber";
 
@@ -10,8 +10,7 @@ export const Route = createFileRoute("/contacto")({
       { title: "Contacto · AMBOSS Arquitectos" },
       {
         name: "description",
-        content:
-          "Escríbenos para iniciar tu proyecto. AMBOSS Arquitectos · Bogotá, Colombia.",
+        content: "Escríbenos para iniciar tu proyecto. AMBOSS Arquitectos · Bucaramanga, Colombia.",
       },
       { property: "og:title", content: "Contacto · AMBOSS Arquitectos" },
       { property: "og:description", content: "Iniciemos una conversación." },
@@ -20,7 +19,7 @@ export const Route = createFileRoute("/contacto")({
   component: ContactoPage,
 });
 
-const types = ["Residencial", "Comercial", "Institucional", "Interiorismo", "Otro"];
+const types = ["Comercial", "Residencial", "Obra civil", "Legalización", "BIM / 3D", "Otro"];
 
 function ContactoPage() {
   const [sent, setSent] = useState(false);
@@ -29,11 +28,11 @@ function ContactoPage() {
     <>
       <section className="mx-auto max-w-[1600px] px-6 pb-16 pt-40 md:px-10 md:pt-48">
         <SectionNumber n="—" label="Hablemos" />
-        <h1 className="mt-8 max-w-5xl font-display text-5xl leading-[1.02] tracking-wide md:text-8xl">
-          <span className="block overflow-hidden">
+        <h1 className="hero-title mt-8 max-w-5xl">
+          <span className="reveal-line">
             <span className="wall-reveal block">Iniciemos</span>
           </span>
-          <span className="block overflow-hidden">
+          <span className="reveal-line">
             <span className="wall-reveal block text-primary" style={{ animationDelay: ".15s" }}>
               tu proyecto.
             </span>
@@ -53,8 +52,8 @@ function ContactoPage() {
                 Gracias. Te escribiremos pronto.
               </h2>
               <p className="mt-4 text-sm text-muted-foreground">
-                Revisamos cada solicitud personalmente. Si tu proyecto requiere
-                respuesta urgente, escríbenos directamente a hola@amboss.co.
+                Revisamos cada solicitud personalmente. Si tu proyecto requiere respuesta urgente,
+                escríbenos directamente a amboss.arquitectura@gmail.com.
               </p>
             </div>
           ) : (
@@ -82,7 +81,7 @@ function ContactoPage() {
                         name="tipo"
                         value={t}
                         className="sr-only"
-                        defaultChecked={t === "Residencial"}
+                        defaultChecked={t === "Comercial"}
                       />
                       {t}
                     </label>
@@ -102,7 +101,7 @@ function ContactoPage() {
                   rows={6}
                   required
                   className="w-full resize-none border border-border bg-transparent p-4 text-sm text-foreground outline-none transition-colors placeholder:text-muted-foreground/60 focus:border-primary"
-                  placeholder="Cuéntanos sobre tu proyecto, ubicación, intenciones…"
+                  placeholder="Cuéntanos sobre tu proyecto, ubicación, alcance y etapa actual."
                 />
               </div>
 
@@ -120,19 +119,25 @@ function ContactoPage() {
         {/* INFO */}
         <aside className="md:col-span-4 md:col-start-9">
           <div className="tick-corners border border-border p-8">
-            <p className="text-[10px] uppercase tracking-[0.3em] text-primary">
-              Directo
-            </p>
+            <p className="text-[10px] uppercase tracking-[0.3em] text-primary">Directo</p>
             <ul className="mt-6 space-y-4 text-sm">
               <li className="flex items-start gap-3">
                 <MapPin className="mt-0.5 h-4 w-4 text-primary" />
-                <span>Bogotá, Colombia</span>
+                <span>Calle 13 # 19 - 36, Mutualidad, Bucaramanga</span>
               </li>
               <li className="flex items-start gap-3">
                 <Mail className="mt-0.5 h-4 w-4 text-primary" />
-                <a href="mailto:hola@amboss.co" className="hover:text-primary">
-                  hola@amboss.co
+                <a href="mailto:amboss.arquitectura@gmail.com" className="hover:text-primary">
+                  amboss.arquitectura@gmail.com
                 </a>
+              </li>
+              <li className="flex items-start gap-3">
+                <Phone className="mt-0.5 h-4 w-4 text-primary" />
+                <span>Eduardo Salamanca: 300 280 4730</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <Phone className="mt-0.5 h-4 w-4 text-primary" />
+                <span>Sebastian Salamanca: 301 593 0601</span>
               </li>
               <li className="flex items-start gap-3">
                 <Instagram className="mt-0.5 h-4 w-4 text-primary" />
@@ -149,18 +154,11 @@ function ContactoPage() {
 
             <div className="mt-8 border-t border-border pt-6">
               <p className="text-[10px] uppercase tracking-[0.3em] text-muted-foreground">
-                Empresa hermana
+                Atención profesional
               </p>
-              <a
-                href="#"
-                className="group mt-4 inline-flex items-center gap-3 font-display text-2xl tracking-[0.3em] text-primary"
-              >
-                LIIT
-                <span className="h-px w-8 bg-primary transition-all group-hover:w-14" />
-              </a>
               <p className="mt-3 text-xs text-muted-foreground">
-                Para proyectos que requieren gerencia y construcción
-                integradas.
+                Revisamos el alcance de cada solicitud para orientar el servicio adecuado: diseño,
+                obra, reforma, trámite, visualización o documentación BIM.
               </p>
             </div>
           </div>
