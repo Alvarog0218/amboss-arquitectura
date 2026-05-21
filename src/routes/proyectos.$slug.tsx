@@ -113,7 +113,7 @@ function ProjectDetail() {
                     Servicios
                   </dt>
                   <dd className="mt-2 flex flex-wrap gap-2">
-                    {project.services.map((service) => (
+                    {project.services.map((service: string) => (
                       <span
                         key={service}
                         className="border border-primary/50 px-3 py-1 text-xs tracking-[0.2em] text-primary"
@@ -167,7 +167,7 @@ function ProjectDetail() {
           transition={{ duration: 0.8 }}
           className="mt-12 grid gap-6 md:grid-cols-3 md:gap-8"
         >
-          {project.gallery.map((image, i) => (
+          {project.gallery.map((image: string, i: number) => (
             <figure
               key={image}
               className="tick-corners overflow-hidden border border-border bg-card"
