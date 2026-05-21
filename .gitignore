@@ -20,6 +20,12 @@ dist-ssr
 .wrangler/
 .dev.vars
 
+# Local source assets / generated files not used by the app bundle
+package-lock.json
+src/assets/AMBOSS/
+src/assets/Brochure AMBOSS_.pdf
+src/assets/Logo-amboss-negro.png
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
