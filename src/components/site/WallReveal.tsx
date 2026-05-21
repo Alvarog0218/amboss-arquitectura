@@ -17,7 +17,7 @@ export function WallReveal({ children, delay = 0, className }: Props) {
       initial={{ clipPath: "inset(0 0 100% 0)", y: 12 }}
       whileInView={{ clipPath: "inset(0 0 0% 0)", y: 0 }}
       transition={{ duration: 1.1, delay, ease: [0.65, 0, 0.35, 1] }}
-      viewport={{ once: true, margin: "-80px" }}
+      viewport={{ once: true, margin: "0px" }}
       className={className}
     >
       {children}
