@@ -2,6 +2,9 @@ import { createFileRoute } from "@tanstack/react-router";
 import { motion } from "motion/react";
 
 import studio from "@/assets/studio.jpg";
+import team1 from "@/assets/team-1.jpg";
+import team2 from "@/assets/team-2.jpg";
+import team3 from "@/assets/team-3.jpg";
 import { SectionNumber } from "@/components/site/SectionNumber";
 import { WallReveal } from "@/components/site/WallReveal";
 import { LiitBand } from "@/components/site/LiitBand";
