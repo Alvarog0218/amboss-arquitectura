@@ -50,6 +50,27 @@ const team = [
   { name: "BIM y 3D", role: "Documentación visual" },
 ];
 
+const members = [
+  {
+    photo: team1,
+    name: "Carlos Andrés Páez",
+    role: "Director de Arquitectura",
+    bio: "Arquitecto con más de 15 años de experiencia en diseño comercial y proyectos integrales.",
+  },
+  {
+    photo: team2,
+    name: "Mariana Torres",
+    role: "Directora de Proyectos",
+    bio: "Especialista en coordinación de obra, modelado BIM y gestión de trámites ante entidades.",
+  },
+  {
+    photo: team3,
+    name: "Daniel Rincón",
+    role: "Coordinador de Estructuras",
+    bio: "Ingeniero enfocado en soluciones constructivas, visualización 3D y documentación técnica.",
+  },
+];
+
 function EstudioPage() {
   return (
     <>
