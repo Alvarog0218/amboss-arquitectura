@@ -77,12 +77,12 @@ function EstudioPage() {
       {/* HERO */}
       <section className="relative mx-auto max-w-[1600px] px-6 pb-20 pt-40 md:px-10 md:pb-32 md:pt-48">
         <SectionNumber n="00" label="El estudio" />
-        <h1 className="hero-title mt-8 max-w-4xl">
+        <h1 className="hero-title mt-8 w-full" style={{ fontSize: "clamp(2rem, 11vw, 9rem)", lineHeight: 1.02 }}>
           <span className="reveal-line">
-            <span className="wall-reveal block">Arquitectura</span>
+            <span className="wall-reveal block break-words">Arquitectura</span>
           </span>
           <span className="reveal-line">
-            <span className="wall-reveal block text-primary" style={{ animationDelay: ".15s" }}>
+            <span className="wall-reveal block break-words text-primary" style={{ animationDelay: ".15s" }}>
               que resuelve.
             </span>
           </span>
