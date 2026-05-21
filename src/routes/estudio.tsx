@@ -2,6 +2,9 @@ import { createFileRoute } from "@tanstack/react-router";
 import { motion } from "motion/react";
 
 import studio from "@/assets/studio.jpg";
+import team1 from "@/assets/team-1.jpg";
+import team2 from "@/assets/team-2.jpg";
+import team3 from "@/assets/team-3.jpg";
 import { SectionNumber } from "@/components/site/SectionNumber";
 import { WallReveal } from "@/components/site/WallReveal";
 import { LiitBand } from "@/components/site/LiitBand";
@@ -45,6 +48,27 @@ const team = [
   { name: "Obra civil", role: "Construcción y reforma" },
   { name: "Legalización", role: "Trámite ante entidades" },
   { name: "BIM y 3D", role: "Documentación visual" },
+];
+
+const members = [
+  {
+    photo: team1,
+    name: "Carlos Andrés Páez",
+    role: "Director de Arquitectura",
+    bio: "Arquitecto con más de 15 años de experiencia en diseño comercial y proyectos integrales.",
+  },
+  {
+    photo: team2,
+    name: "Mariana Torres",
+    role: "Directora de Proyectos",
+    bio: "Especialista en coordinación de obra, modelado BIM y gestión de trámites ante entidades.",
+  },
+  {
+    photo: team3,
+    name: "Daniel Rincón",
+    role: "Coordinador de Estructuras",
+    bio: "Ingeniero enfocado en soluciones constructivas, visualización 3D y documentación técnica.",
+  },
 ];
 
 function EstudioPage() {
@@ -168,6 +192,57 @@ function EstudioPage() {
             </li>
           ))}
         </ul>
+      </section>
+
+      {/* EQUIPO */}
+      <section className="mx-auto max-w-[1600px] px-6 py-28 md:px-10 md:py-32">
+        <SectionNumber n="03" label="Equipo" />
+        <h2 className="mt-6 font-display text-4xl tracking-wide md:text-6xl">
+          Quienes <span className="text-primary">construyen.</span>
+        </h2>
+
+        <div className="mt-16 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+          {members.map((m, i) => (
+            <motion.article
+              key={m.name}
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-60px" }}
+              transition={{ duration: 0.7, delay: i * 1.2 }}
+              className="group"
+            >
+              <div className="tick-corners relative overflow-hidden bg-card">
+                <img
+                  src={m.photo}
+                  alt={`Foto de ${m.name}`}
+                  width={800}
+                  height={1000}
+                  loading="lazy"
+                  className="aspect-[4/5] w-full object-cover grayscale-[20%] transition-all duration-700 group-hover:grayscale-0 group-hover:scale-[1.03]"
+                />
+                <div className="blueprint-grid-fine pointer-events-none absolute inset-1 opacity-0 transition-opacity duration-500 group-hover:opacity-30" />
+                <div className="absolute bottom-5 left-0 right-0 translate-y-full bg-gradient-to-t from-black/80 via-black/40 to-transparent px-6 pb-6 pt-16 transition-transform duration-500 group-hover:translate-y-0">
+                  <p className="text-sm leading-relaxed text-bone opacity-90">
+                    {m.bio}
+                  </p>
+                </div>
+              </div>
+              <div className="mt-4 flex items-end justify-between">
+                <div>
+                  <h3 className="font-display text-xl tracking-wide text-foreground md:text-2xl">
+                    {m.name}
+                  </h3>
+                  <p className="mt-1 text-xs uppercase tracking-[0.25em] text-muted-foreground">
+                    {m.role}
+                  </p>
+                </div>
+                <span className="text-[10px] font-mono text-muted-foreground">
+                  0{i + 1}
+                </span>
+              </div>
+            </motion.article>
+          ))}
+        </div>
       </section>
 
       <LiitBand />
