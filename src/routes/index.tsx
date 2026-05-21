@@ -3,6 +3,7 @@ import { motion } from "motion/react";
 import { ArrowDown, ArrowUpRight } from "lucide-react";
 
 import hero from "@/assets/hero.jpg";
+import studioImg from "@/assets/studio.jpg";
 import { projects } from "@/data/projects";
 import { ProjectCard } from "@/components/site/ProjectCard";
 import { WallReveal } from "@/components/site/WallReveal";
