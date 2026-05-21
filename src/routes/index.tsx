@@ -3,6 +3,7 @@ import { motion } from "motion/react";
 import { ArrowDown, ArrowUpRight } from "lucide-react";
 
 import hero from "@/assets/hero.jpg";
+import studioImg from "@/assets/studio.jpg";
 import { projects } from "@/data/projects";
 import { ProjectCard } from "@/components/site/ProjectCard";
 import { WallReveal } from "@/components/site/WallReveal";
@@ -182,22 +183,72 @@ function HomePage() {
 
       {/* ===== ABOUT INTRO ===== */}
       <section className="relative mx-auto max-w-[1600px] px-6 py-28 md:px-10 md:py-40">
-        <div className="grid gap-16 md:grid-cols-12">
-          <div className="md:col-span-4">
-            <SectionNumber n="01" label="Estudio" />
+        <SectionNumber n="01" label="Estudio" />
+        <div className="mt-12 grid gap-12 md:grid-cols-12 md:gap-16">
+          {/* Visual column */}
+          <div className="md:col-span-5">
             <WallReveal>
-              <h2 className="mt-8 font-display text-3xl leading-tight tracking-wide md:text-4xl">
-                Diseño,
-                <br />
-                obra,
+              <div className="group relative aspect-[4/5] w-full overflow-hidden border border-border bg-secondary">
+                <img
+                  src={studioImg}
+                  alt="Estudio AMBOSS Arquitectos"
+                  className="absolute inset-0 h-full w-full object-cover transition-transform duration-[1.2s] ease-out group-hover:scale-105"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-background/20 to-transparent" />
+                <div className="blueprint-grid pointer-events-none absolute inset-0 opacity-40 mix-blend-overlay" />
+
+                {/* corner ticks */}
+                <div className="pointer-events-none absolute inset-4">
+                  <div className="absolute left-0 top-0 h-4 w-4 border-l border-t border-primary" />
+                  <div className="absolute right-0 top-0 h-4 w-4 border-r border-t border-primary" />
+                  <div className="absolute bottom-0 left-0 h-4 w-4 border-b border-l border-primary" />
+                  <div className="absolute bottom-0 right-0 h-4 w-4 border-b border-r border-primary" />
+                </div>
+
+                {/* tag */}
+                <div className="absolute left-4 top-4 flex items-center gap-2 border border-primary/60 bg-background/70 px-3 py-1.5 text-[9px] uppercase tracking-[0.3em] text-primary backdrop-blur">
+                  <span className="h-1.5 w-1.5 rotate-45 bg-primary" />
+                  AMB · 001 / EST
+                </div>
+
+                {/* bottom caption */}
+                <div className="absolute inset-x-4 bottom-4 flex items-end justify-between text-[10px] uppercase tracking-[0.3em] text-foreground">
+                  <span>Bucaramanga</span>
+                  <span className="text-primary">07° 07' N</span>
+                </div>
+              </div>
+            </WallReveal>
+
+            {/* mini stats */}
+            <div className="mt-6 grid grid-cols-3 divide-x divide-border border border-border">
+              {[
+                { k: "+10", v: "Proyectos" },
+                { k: "05", v: "Servicios" },
+                { k: "BIM", v: "Metodología" },
+              ].map((s) => (
+                <div key={s.v} className="px-3 py-4 text-center">
+                  <div className="font-display text-xl tracking-wide text-primary md:text-2xl">
+                    {s.k}
+                  </div>
+                  <div className="mt-1 text-[9px] uppercase tracking-[0.3em] text-muted-foreground">
+                    {s.v}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Text column */}
+          <div className="md:col-span-6 md:col-start-7">
+            <WallReveal>
+              <h2 className="font-display text-3xl leading-tight tracking-wide md:text-5xl">
+                Diseño, obra,
                 <br />
                 <span className="text-primary">solución.</span>
               </h2>
             </WallReveal>
-          </div>
-          <div className="md:col-span-7 md:col-start-6">
             <WallReveal delay={0.1}>
-              <p className="text-lg leading-relaxed text-foreground md:text-2xl">
+              <p className="mt-8 text-lg leading-relaxed text-foreground md:text-2xl">
                 En AMBOSS desarrollamos soluciones arquitectónicas ajustadas a las necesidades
                 reales de cada proyecto, con criterio técnico, servicio profesional y una visión
                 integral del proceso.
