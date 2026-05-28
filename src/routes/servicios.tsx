@@ -17,7 +17,7 @@ export const Route = createFileRoute("/servicios")({
       { property: "og:title", content: "Servicios · AMBOSS Arquitectos" },
       {
         property: "og:description",
-        content: "Servicios integrales para proyectos comerciales, residenciales e inmobiliarios.",
+        content: "Servicios de arquitectura para proyectos comerciales, residenciales e inmobiliarios.",
       },
     ],
   }),

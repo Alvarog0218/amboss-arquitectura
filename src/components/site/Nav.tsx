@@ -44,7 +44,7 @@ export function Nav() {
           <img src={logoMark} alt="AMBOSS" className="h-9 w-9 object-contain" />
           <span className="text-base">AMBOSS</span>
           <span className="hidden text-[10px] text-muted-foreground sm:inline">
-            / SOLUCIONES INTEGRALES
+            / ARQUITECTOS
           </span>
         </Link>
 

@@ -13,16 +13,16 @@ import { LiitBand } from "@/components/site/LiitBand";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "AMBOSS Arquitectos · Diseño y soluciones integrales" },
+      { title: "AMBOSS Arquitectos · Diseño y arquitectos" },
       {
         name: "description",
         content:
-          "AMBOSS Diseños y Soluciones Integrales SAS. Diseño, construcción, reformas, legalización, visualización, planimetría, modelado 3D y BIM.",
+          "AMBOSS Arquitectos. Diseño, construcción, reformas, legalización, visualización, planimetría, modelado 3D y BIM.",
       },
       { property: "og:title", content: "AMBOSS Arquitectos" },
       {
         property: "og:description",
-        content: "Arquitectura y soluciones integrales con sede en Bucaramanga.",
+        content: "Arquitectura y arquitectos con sede en Bucaramanga.",
       },
     ],
   }),
@@ -73,7 +73,7 @@ function HomePage() {
       <section className="relative h-[100svh] min-h-[640px] w-full overflow-hidden">
         <img
           src={hero}
-          alt="Arquitectura y soluciones integrales AMBOSS"
+          alt="AMBOSS Arquitectos"
           width={1920}
           height={1280}
           className="absolute inset-0 h-full w-full object-cover"
@@ -92,7 +92,7 @@ function HomePage() {
         <div className="relative z-10 mx-auto flex h-full max-w-[1600px] flex-col justify-between px-6 pb-12 pt-32 md:px-10">
           <div className="flex items-center justify-between text-[10px] uppercase tracking-[0.35em] text-muted-foreground">
             <span>Bucaramanga · Colombia</span>
-            <span className="hidden md:inline">Diseños y soluciones integrales SAS</span>
+            <span className="hidden md:inline">AMBOSS Arquitectos</span>
           </div>
 
           <div>
@@ -131,8 +131,8 @@ function HomePage() {
               className="mt-10 flex flex-col items-start gap-8 md:flex-row md:items-end md:justify-between"
             >
               <p className="max-w-md text-sm leading-relaxed text-muted-foreground md:text-base">
-                Somos una compañía de arquitectos enfocada en diseño, construcción y soluciones
-                integrales para proyectos comerciales, residenciales e inmobiliarios.
+                Somos una compañía de arquitectos enfocada en diseño, construcción y arquitectura
+                para proyectos comerciales, residenciales e inmobiliarios.
               </p>
               <div className="flex gap-3">
                 <Link

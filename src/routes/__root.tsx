@@ -80,13 +80,13 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       {
         name: "description",
         content:
-          "AMBOSS Diseños y Soluciones Integrales SAS. Diseño arquitectónico, construcción, reformas, legalización, visualización, planimetría, modelado 3D y BIM en Bucaramanga.",
+          "AMBOSS Arquitectos. Diseño arquitectónico, construcción, reformas, legalización, visualización, planimetría, modelado 3D y BIM en Bucaramanga.",
       },
-      { name: "author", content: "AMBOSS Diseños y Soluciones Integrales SAS" },
+      { name: "author", content: "AMBOSS Arquitectos" },
       { property: "og:title", content: "AMBOSS Arquitectos" },
       {
         property: "og:description",
-        content: "Soluciones integrales para proyectos comerciales, residenciales e inmobiliarios.",
+        content: "Arquitectura para proyectos comerciales, residenciales e inmobiliarios.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },

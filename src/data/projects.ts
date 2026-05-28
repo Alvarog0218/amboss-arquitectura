@@ -182,7 +182,7 @@ export const projects: Project[] = [
     image: insummaCover,
     gallery: [insummaGallery1, insummaGallery2, insummaGallery3],
     description:
-      "Soluciones integrales para oficinas, zonas administrativas y áreas de apoyo en un entorno productivo con necesidades técnicas específicas.",
+      "Arquitectura para oficinas, zonas administrativas y áreas de apoyo en un entorno productivo con necesidades técnicas específicas.",
     services: ["Obra civil", "Redes técnicas", "Diseño integral"],
   },
   {

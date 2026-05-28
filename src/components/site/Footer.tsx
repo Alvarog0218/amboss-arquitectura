@@ -13,13 +13,13 @@ export function Footer() {
           <div className="md:col-span-5">
             <img src={logoMark} alt="AMBOSS" className="mb-8 h-16 w-16 object-contain" />
             <p className="font-display text-3xl leading-tight tracking-wide md:text-5xl">
-              Diseñamos
+              Somos
               <br />
-              <span className="text-primary">soluciones</span> integrales.
+              <span className="text-primary">arquitectos.</span>
             </p>
             <p className="mt-6 max-w-md text-sm leading-relaxed text-muted-foreground">
-              AMBOSS Diseños y Soluciones Integrales SAS. Arquitectura, construcción, reformas,
-              legalización, visualización, planimetría, modelado 3D y BIM.
+              AMBOSS Arquitectos. Arquitectura, construcción, reformas, legalización, visualización,
+              planimetría, modelado 3D y BIM.
             </p>
           </div>
 

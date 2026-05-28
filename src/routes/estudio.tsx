@@ -16,7 +16,7 @@ export const Route = createFileRoute("/estudio")({
       {
         name: "description",
         content:
-          "AMBOSS Diseños y Soluciones Integrales SAS. Arquitectos especializados en diseño, construcción y soluciones integrales.",
+          "AMBOSS Arquitectos. Arquitectos especializados en diseño, construcción y arquitectura.",
       },
       { property: "og:title", content: "Estudio · AMBOSS Arquitectos" },
       { property: "og:description", content: "Misión, visión y forma de trabajo de AMBOSS." },
@@ -29,7 +29,7 @@ const principles = [
   {
     n: "01",
     title: "Misión",
-    desc: "Ofrecer soluciones integrales que se ajusten a las necesidades particulares de cada proyecto, con calidad, criterio técnico y trato profesional.",
+    desc: "Ofrecer arquitectura que se ajuste a las necesidades particulares de cada proyecto, con calidad, criterio técnico y trato profesional.",
   },
   {
     n: "02",
@@ -107,7 +107,7 @@ function EstudioPage() {
           <WallReveal>
             <p className="text-lg leading-relaxed text-foreground md:text-xl">
               Somos una compañía de arquitectos que presta servicios de diseño, construcción y
-              soluciones integrales para materializar proyectos con orden, funcionalidad y respaldo
+              arquitectura para materializar proyectos con orden, funcionalidad y respaldo
               técnico.
             </p>
           </WallReveal>
