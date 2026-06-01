@@ -188,7 +188,7 @@ function HomePage() {
           {/* Visual column */}
           <div className="md:col-span-5">
             <WallReveal>
-              <div className="group relative aspect-[4/5] w-full overflow-hidden border border-border bg-secondary">
+              <div className="group relative aspect-square w-full overflow-hidden border border-border bg-secondary">
                 <img
                   src={studioImg}
                   alt="Estudio AMBOSS Arquitectos"
