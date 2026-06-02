@@ -9,6 +9,7 @@ const links = [
   { to: "/estudio", label: "Estudio" },
   { to: "/proyectos", label: "Proyectos" },
   { to: "/servicios", label: "Servicios" },
+  { to: "/simulador", label: "Simulador" },
   { to: "/contacto", label: "Contacto" },
 ] as const;
 
@@ -41,9 +42,9 @@ export function Nav() {
           to="/"
           className="flex items-center gap-3 font-display text-sm tracking-[0.35em] text-foreground"
         >
-          <img src={logoMark} alt="AMBOSS" className="h-9 w-9 object-contain" />
+          <img src={logoMark} alt="AMBOSS" className="hidden h-9 w-9 object-contain md:block" />
           <span className="text-base">AMBOSS</span>
-          <span className="hidden text-[10px] text-muted-foreground sm:inline">
+          <span className="hidden text-[10px] text-muted-foreground lg:inline">
             / ARQUITECTOS
           </span>
         </Link>

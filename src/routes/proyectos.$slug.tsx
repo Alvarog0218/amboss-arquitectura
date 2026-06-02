@@ -75,7 +75,7 @@ function ProjectDetail() {
 
           <div className="mt-10 grid gap-10 md:grid-cols-12">
             <div className="md:col-span-8">
-              <SectionNumber n={project.category.toUpperCase()} label={project.sector} />
+              <SectionNumber label={project.sector} />
               <h1 className="hero-title mt-6">
                 <span className="reveal-line">
                   <span className="wall-reveal block">{project.title}</span>
@@ -144,7 +144,7 @@ function ProjectDetail() {
       {/* DESCRIPCIÓN */}
       <section className="mx-auto max-w-[1600px] px-6 py-24 md:grid md:grid-cols-12 md:gap-10 md:px-10 md:py-32">
         <div className="md:col-span-4">
-          <SectionNumber n="01" label="Concepto" />
+          <SectionNumber label="Concepto" />
         </div>
         <div className="md:col-span-8">
           <p className="font-display text-2xl leading-snug tracking-wide text-foreground md:text-4xl">
@@ -155,7 +155,7 @@ function ProjectDetail() {
 
       {/* GALERIA */}
       <section className="mx-auto max-w-[1600px] border-y border-border bg-secondary px-6 py-24 md:px-10 md:py-32">
-        <SectionNumber n="02" label="Galería" />
+        <SectionNumber label="Galería" />
         <h2 className="mt-6 font-display text-3xl tracking-wide md:text-5xl">
           Imágenes <span className="text-primary">del proyecto.</span>
         </h2>
@@ -179,7 +179,7 @@ function ProjectDetail() {
                 className="aspect-[4/3] w-full object-cover grayscale-[12%]"
               />
               <figcaption className="border-t border-border px-5 py-4 text-[10px] uppercase tracking-[0.3em] text-muted-foreground">
-                Vista {String(i + 1).padStart(2, "0")}
+                Vista
               </figcaption>
             </figure>
           ))}
@@ -190,7 +190,7 @@ function ProjectDetail() {
       <section className="mx-auto max-w-[1600px] px-6 py-28 md:px-10 md:py-32">
         <div className="mb-12 flex items-end justify-between">
           <div>
-            <SectionNumber n="03" label="Continuar viendo" />
+            <SectionNumber label="Continuar viendo" />
             <h2 className="mt-6 font-display text-3xl tracking-wide md:text-5xl">
               Otros <span className="text-primary">proyectos.</span>
             </h2>
@@ -234,9 +234,6 @@ function RelatedCard({ p, i }: { p: ReturnType<typeof projects.slice>[number]; i
             </p>
             <h3 className="mt-1 font-display text-lg tracking-wide">{p.title}</h3>
           </div>
-          <span className="font-display text-xs tracking-[0.3em] text-muted-foreground">
-            0{i + 1}
-          </span>
         </div>
       </div>
     </Link>

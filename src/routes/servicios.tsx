@@ -88,7 +88,7 @@ function ServiciosPage() {
   return (
     <>
       <section className="mx-auto max-w-[1600px] px-6 pb-16 pt-40 md:px-10 md:pt-48">
-        <SectionNumber n="—" label="Qué hacemos" />
+        <SectionNumber label="Qué hacemos" />
         <h1 className="hero-title mt-8 max-w-5xl">
           <span className="reveal-line">
             <span className="wall-reveal block">Diseño,</span>
@@ -121,10 +121,7 @@ function ServiciosPage() {
                   onClick={() => setOpen(isOpen ? null : i)}
                   className="grid w-full grid-cols-12 items-center gap-4 py-8 text-left transition-colors hover:bg-secondary md:py-10"
                 >
-                  <span className="col-span-2 font-display text-sm tracking-[0.3em] text-primary md:col-span-1">
-                    {s.n}
-                  </span>
-                  <span className="col-span-8 font-display text-2xl tracking-wide md:col-span-7 md:text-4xl">
+                  <span className="col-span-10 font-display text-2xl tracking-wide md:col-span-8 md:text-4xl">
                     {s.title}
                   </span>
                   <span className="col-span-12 hidden text-sm text-muted-foreground md:col-span-3 md:block">

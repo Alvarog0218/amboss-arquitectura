@@ -3,7 +3,7 @@ import { motion } from "motion/react";
 import { ArrowDown, ArrowUpRight } from "lucide-react";
 
 import hero from "@/assets/hero.jpg";
-import studioImg from "@/assets/studio.jpg";
+import studioImg from "@/assets/ESTUDIO.webp";
 import { projects } from "@/data/projects";
 import { ProjectCard } from "@/components/site/ProjectCard";
 import { WallReveal } from "@/components/site/WallReveal";
@@ -183,7 +183,7 @@ function HomePage() {
 
       {/* ===== ABOUT INTRO ===== */}
       <section className="relative mx-auto max-w-[1600px] px-6 py-28 md:px-10 md:py-40">
-        <SectionNumber n="01" label="Estudio" />
+        <SectionNumber label="Estudio" />
         <div className="mt-12 grid gap-12 md:grid-cols-12 md:gap-16">
           {/* Visual column */}
           <div className="md:col-span-5">
@@ -279,7 +279,7 @@ function HomePage() {
         <div className="mx-auto max-w-[1600px] px-6 md:px-10">
           <div className="mb-16 flex items-end justify-between gap-6">
             <div>
-              <SectionNumber n="02" label="Portafolio" />
+              <SectionNumber label="Portafolio" />
               <h2 className="mt-6 font-display text-4xl leading-tight tracking-wide md:text-6xl">
                 Proyectos
                 <br />
@@ -305,7 +305,7 @@ function HomePage() {
 
       {/* ===== SERVICES ===== */}
       <section className="relative mx-auto max-w-[1600px] px-6 py-28 md:px-10 md:py-40">
-        <SectionNumber n="03" label="Servicios" />
+        <SectionNumber label="Servicios" />
         <h2 className="mt-6 max-w-3xl font-display text-4xl leading-tight tracking-wide md:text-6xl">
           Un equipo para resolver <span className="text-primary">todo el proceso.</span>
         </h2>
@@ -323,10 +323,7 @@ function HomePage() {
                 to="/servicios"
                 className="group grid grid-cols-12 items-center gap-4 py-8 transition-colors hover:bg-secondary md:py-10"
               >
-                <span className="col-span-2 font-display text-sm tracking-[0.3em] text-primary md:col-span-1">
-                  {s.n}
-                </span>
-                <span className="col-span-10 font-display text-2xl tracking-wide text-foreground md:col-span-5 md:text-4xl">
+                <span className="col-span-12 font-display text-2xl tracking-wide text-foreground md:col-span-6 md:text-4xl">
                   {s.title}
                 </span>
                 <span className="col-span-12 text-sm text-muted-foreground md:col-span-5">

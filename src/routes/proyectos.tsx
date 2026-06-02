@@ -41,7 +41,7 @@ function ProyectosPage() {
   return (
     <>
       <section className="mx-auto max-w-[1600px] px-6 pb-12 pt-40 md:px-10 md:pt-48">
-        <SectionNumber n="—" label="Portafolio real" />
+        <SectionNumber label="Portafolio real" />
         <h1 className="hero-title mt-8">
           <span className="reveal-line">
             <span className="wall-reveal block">Proyectos</span>

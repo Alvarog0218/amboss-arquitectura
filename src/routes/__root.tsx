@@ -4,6 +4,7 @@ import {
   Link,
   createRootRouteWithContext,
   useRouter,
+  useRouterState,
   HeadContent,
   Scripts,
 } from "@tanstack/react-router";
@@ -95,6 +96,10 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     links: [
       { rel: "stylesheet", href: appCss },
       { rel: "icon", type: "image/png", href: favicon },
+      {
+        rel: "stylesheet",
+        href: "https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap",
+      },
     ],
   }),
   shellComponent: RootShell,
@@ -119,13 +124,16 @@ function RootShell({ children }: { children: React.ReactNode }) {
 
 function RootComponent() {
   const { queryClient } = Route.useRouteContext();
+  const { pathname } = useRouterState({ select: (s) => s.location });
+  const isSimulator = pathname === "/simulador";
+
   return (
     <QueryClientProvider client={queryClient}>
-      <Nav />
-      <main className="min-h-screen">
+      {!isSimulator && <Nav />}
+      <main className={!isSimulator ? "min-h-screen" : ""}>
         <Outlet />
       </main>
-      <Footer />
+      {!isSimulator && <Footer />}
     </QueryClientProvider>
   );
 }

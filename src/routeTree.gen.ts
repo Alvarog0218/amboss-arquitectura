@@ -9,6 +9,7 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as SimuladorRouteImport } from './routes/simulador'
 import { Route as ServiciosRouteImport } from './routes/servicios'
 import { Route as ProyectosRouteImport } from './routes/proyectos'
 import { Route as EstudioRouteImport } from './routes/estudio'
@@ -16,6 +17,11 @@ import { Route as ContactoRouteImport } from './routes/contacto'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as ProyectosSlugRouteImport } from './routes/proyectos.$slug'
 
+const SimuladorRoute = SimuladorRouteImport.update({
+  id: '/simulador',
+  path: '/simulador',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const ServiciosRoute = ServiciosRouteImport.update({
   id: '/servicios',
   path: '/servicios',
@@ -53,6 +59,7 @@ export interface FileRoutesByFullPath {
   '/estudio': typeof EstudioRoute
   '/proyectos': typeof ProyectosRouteWithChildren
   '/servicios': typeof ServiciosRoute
+  '/simulador': typeof SimuladorRoute
   '/proyectos/$slug': typeof ProyectosSlugRoute
 }
 export interface FileRoutesByTo {
@@ -61,6 +68,7 @@ export interface FileRoutesByTo {
   '/estudio': typeof EstudioRoute
   '/proyectos': typeof ProyectosRouteWithChildren
   '/servicios': typeof ServiciosRoute
+  '/simulador': typeof SimuladorRoute
   '/proyectos/$slug': typeof ProyectosSlugRoute
 }
 export interface FileRoutesById {
@@ -70,6 +78,7 @@ export interface FileRoutesById {
   '/estudio': typeof EstudioRoute
   '/proyectos': typeof ProyectosRouteWithChildren
   '/servicios': typeof ServiciosRoute
+  '/simulador': typeof SimuladorRoute
   '/proyectos/$slug': typeof ProyectosSlugRoute
 }
 export interface FileRouteTypes {
@@ -80,6 +89,7 @@ export interface FileRouteTypes {
     | '/estudio'
     | '/proyectos'
     | '/servicios'
+    | '/simulador'
     | '/proyectos/$slug'
   fileRoutesByTo: FileRoutesByTo
   to:
@@ -88,6 +98,7 @@ export interface FileRouteTypes {
     | '/estudio'
     | '/proyectos'
     | '/servicios'
+    | '/simulador'
     | '/proyectos/$slug'
   id:
     | '__root__'
@@ -96,6 +107,7 @@ export interface FileRouteTypes {
     | '/estudio'
     | '/proyectos'
     | '/servicios'
+    | '/simulador'
     | '/proyectos/$slug'
   fileRoutesById: FileRoutesById
 }
@@ -105,10 +117,18 @@ export interface RootRouteChildren {
   EstudioRoute: typeof EstudioRoute
   ProyectosRoute: typeof ProyectosRouteWithChildren
   ServiciosRoute: typeof ServiciosRoute
+  SimuladorRoute: typeof SimuladorRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/simulador': {
+      id: '/simulador'
+      path: '/simulador'
+      fullPath: '/simulador'
+      preLoaderRoute: typeof SimuladorRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/servicios': {
       id: '/servicios'
       path: '/servicios'
@@ -172,6 +192,7 @@ const rootRouteChildren: RootRouteChildren = {
   EstudioRoute: EstudioRoute,
   ProyectosRoute: ProyectosRouteWithChildren,
   ServiciosRoute: ServiciosRoute,
+  SimuladorRoute: SimuladorRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

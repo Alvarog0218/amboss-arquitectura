@@ -1,10 +1,10 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { motion } from "motion/react";
 
-import studio from "@/assets/studio.jpg";
-import team1 from "@/assets/team-1.jpg";
-import team2 from "@/assets/team-2.jpg";
-import team3 from "@/assets/team-3.jpg";
+import studio from "@/assets/ESTUDIO.webp";
+import eduardoPhoto from "@/assets/EDUARDO.webp";
+import paulaPhoto from "@/assets/PAULA.webp";
+import sebastianPhoto from "@/assets/SEBASTIAN.webp";
 import { SectionNumber } from "@/components/site/SectionNumber";
 import { WallReveal } from "@/components/site/WallReveal";
 import { LiitBand } from "@/components/site/LiitBand";
@@ -52,22 +52,22 @@ const team = [
 
 const members = [
   {
-    photo: team1,
-    name: "Carlos Andrés Páez",
-    role: "Director de Arquitectura",
-    bio: "Arquitecto con más de 15 años de experiencia en diseño comercial y proyectos integrales.",
+    photo: eduardoPhoto,
+    name: "Eduardo Salamanca",
+    role: "Arquitecto",
+    bio: "Arquitecto enfocado en diseño y construcción de proyectos comerciales y residenciales.",
   },
   {
-    photo: team2,
-    name: "Mariana Torres",
+    photo: paulaPhoto,
+    name: "Paula",
     role: "Directora de Proyectos",
     bio: "Especialista en coordinación de obra, modelado BIM y gestión de trámites ante entidades.",
   },
   {
-    photo: team3,
-    name: "Daniel Rincón",
-    role: "Coordinador de Estructuras",
-    bio: "Ingeniero enfocado en soluciones constructivas, visualización 3D y documentación técnica.",
+    photo: sebastianPhoto,
+    name: "Sebastian Salamanca",
+    role: "Arquitecto",
+    bio: "Arquitecto especializado en visualización 3D, documentación técnica y diseño arquitectónico.",
   },
 ];
 
@@ -76,7 +76,7 @@ function EstudioPage() {
     <>
       {/* HERO */}
       <section className="relative mx-auto max-w-[1600px] px-6 pb-20 pt-40 md:px-10 md:pb-32 md:pt-48">
-        <SectionNumber n="00" label="El estudio" />
+        <SectionNumber label="El estudio" />
         <h1 className="hero-title mt-8 w-full" style={{ fontSize: "clamp(1.75rem, 6.5vw, 5.5rem)", lineHeight: 1.05 }}>
           <span className="reveal-line">
             <span className="wall-reveal block whitespace-nowrap">Arquitectura</span>
@@ -99,7 +99,7 @@ function EstudioPage() {
               width={1600}
               height={1100}
               loading="lazy"
-              className="aspect-[16/11] w-full object-cover grayscale-[15%]"
+              className="aspect-[16/11] w-full object-cover"
             />
           </div>
         </div>
@@ -137,7 +137,7 @@ function EstudioPage() {
 
       {/* PRINCIPIOS */}
       <section className="relative mx-auto max-w-[1600px] px-6 py-28 md:px-10 md:py-32">
-        <SectionNumber n="01" label="Misión y visión" />
+        <SectionNumber label="Misión y visión" />
         <h2 className="mt-6 max-w-2xl font-display text-4xl leading-tight tracking-wide md:text-6xl">
           Una forma clara de <span className="text-primary">acompañar.</span>
         </h2>
@@ -145,7 +145,7 @@ function EstudioPage() {
         <ol className="mt-16 space-y-0 border-l border-border">
           {principles.map((t, i) => (
             <motion.li
-              key={t.n}
+              key={t.title}
               initial={{ opacity: 0, x: -40 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true, margin: "-60px" }}
@@ -153,13 +153,10 @@ function EstudioPage() {
               className="relative grid grid-cols-12 gap-6 py-10 pl-8 md:py-12 md:pl-12"
             >
               <span className="absolute -left-[5px] top-12 h-2.5 w-2.5 rotate-45 bg-primary" />
-              <span className="col-span-3 font-display text-sm tracking-[0.3em] text-primary md:col-span-2 md:text-base">
-                {t.n}
-              </span>
-              <span className="col-span-9 font-display text-2xl tracking-wide text-foreground md:col-span-4 md:text-3xl">
+              <span className="col-span-12 font-display text-2xl tracking-wide text-foreground md:col-span-4 md:text-3xl">
                 {t.title}
               </span>
-              <p className="col-span-12 text-sm leading-relaxed text-muted-foreground md:col-span-6">
+              <p className="col-span-12 text-sm leading-relaxed text-muted-foreground md:col-span-8">
                 {t.desc}
               </p>
             </motion.li>
@@ -169,7 +166,7 @@ function EstudioPage() {
 
       {/* CAPACIDADES */}
       <section className="mx-auto max-w-[1600px] px-6 py-28 md:px-10">
-        <SectionNumber n="02" label="Capacidades" />
+        <SectionNumber label="Capacidades" />
         <h2 className="mt-6 font-display text-4xl tracking-wide md:text-6xl">
           Soluciones <span className="text-primary">coordinadas.</span>
         </h2>
@@ -196,7 +193,7 @@ function EstudioPage() {
 
       {/* EQUIPO */}
       <section className="mx-auto max-w-[1600px] px-6 py-28 md:px-10 md:py-32">
-        <SectionNumber n="03" label="Equipo" />
+        <SectionNumber label="Equipo" />
         <h2 className="mt-6 font-display text-4xl tracking-wide md:text-6xl">
           Quienes <span className="text-primary">construyen.</span>
         </h2>
@@ -218,7 +215,7 @@ function EstudioPage() {
                   width={800}
                   height={1000}
                   loading="lazy"
-                  className="aspect-[4/5] w-full object-cover grayscale-[20%] transition-all duration-700 group-hover:grayscale-0 group-hover:scale-[1.03]"
+                  className="aspect-[4/5] w-full object-cover transition-all duration-700 group-hover:scale-[1.03]"
                 />
                 <div className="blueprint-grid-fine pointer-events-none absolute inset-1 opacity-0 transition-opacity duration-500 group-hover:opacity-30" />
                 <div className="absolute bottom-5 left-0 right-0 translate-y-full bg-gradient-to-t from-black/80 via-black/40 to-transparent px-6 pb-6 pt-16 transition-transform duration-500 group-hover:translate-y-0">
@@ -236,9 +233,6 @@ function EstudioPage() {
                     {m.role}
                   </p>
                 </div>
-                <span className="text-[10px] font-mono text-muted-foreground">
-                  0{i + 1}
-                </span>
               </div>
             </motion.article>
           ))}

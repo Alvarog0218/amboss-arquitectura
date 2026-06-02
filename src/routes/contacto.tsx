@@ -27,7 +27,7 @@ function ContactoPage() {
   return (
     <>
       <section className="mx-auto max-w-[1600px] px-6 pb-16 pt-40 md:px-10 md:pt-48">
-        <SectionNumber n="—" label="Hablemos" />
+        <SectionNumber label="Hablemos" />
         <h1 className="hero-title mt-8 max-w-5xl">
           <span className="reveal-line">
             <span className="wall-reveal block">Iniciemos</span>

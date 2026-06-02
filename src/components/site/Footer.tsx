@@ -25,7 +25,7 @@ export function Footer() {
 
           <div className="md:col-span-3">
             <p className="mb-4 text-[10px] uppercase tracking-[0.3em] text-muted-foreground">
-              01 / Navegación
+              Navegación
             </p>
             <ul className="space-y-2 text-sm">
               <li>
@@ -53,7 +53,7 @@ export function Footer() {
 
           <div className="md:col-span-4">
             <p className="mb-4 text-[10px] uppercase tracking-[0.3em] text-muted-foreground">
-              02 / Contacto
+              Contacto
             </p>
             <ul className="space-y-3 text-sm text-foreground">
               <li className="flex items-start gap-3">
