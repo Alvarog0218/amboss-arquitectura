@@ -38,3 +38,9 @@ Este archivo contiene un registro de los cambios realizados en el proyecto.
     - Se eliminaron todos los componentes de la interfaz de usuario (`src/components/ui`) que no estaban en uso, junto con sus respectivos hooks y utilidades, simplificando la estructura del código.
     - Se depuraron las imágenes de la carpeta `src/assets/AMBOSS_OPT` eliminando las portadas antiguas que fueron reemplazadas por formatos `.webp` más eficientes.
     - Se eliminaron archivos de texto temporales y configuraciones de componentes no utilizadas para mantener un entorno de desarrollo limpio y profesional.
+- Rediseño Integral del Simulador de Proyectos:
+    - Se eliminó el archivo de estilos independiente `simulator.css` para integrar el componente totalmente al sistema de diseño global basado en Tailwind.
+    - Se aplicó la identidad visual de la marca: paleta de colores arquitectónica (verde profundo, warm off-white), tipografías oficiales (Metaluna, Anta) y efectos de "blueprint".
+    - Se rediseñó la interfaz paso a paso con animaciones fluidas (`framer-motion`), nuevos iconos técnicos y un resumen de presupuesto lateral fijo (sticky) para mejorar la experiencia de usuario.
+    - Se integró el simulador con el layout global, permitiendo que ahora incluya el `Nav` y `Footer` corporativos, manteniendo la coherencia con el resto del sitio web.
+    - Se optimizó la respuesta móvil y se ajustó la lógica de cotización para redirigir a WhatsApp con un mensaje técnico pre-formateado.
