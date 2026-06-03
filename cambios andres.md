@@ -32,3 +32,9 @@ Este archivo contiene un registro de los cambios realizados en el proyecto.
 - Actualización en la sección de Empresa Aliada (LIIT):
     - Se eliminó la funcionalidad de descarga de brochure y el archivo PDF asociado de la interfaz.
     - Se renombró el botón secundario a "**Conocer LIIT**" y se redirigió a la sección de contacto para centralizar las consultas de la alianza.
+- Limpieza y Optimización del Proyecto:
+    - Se eliminaron más de **1 GB** de archivos innecesarios, incluyendo fotos en alta resolución sin optimizar (`DSC0*`), imágenes de proyectos redundantes y carpetas temporales (`src/Fotos 1`).
+    - Se removieron archivos PDF de gran tamaño (manuales de marca y brochures antiguos) que se encontraban en la raíz del proyecto y en carpetas de assets, reduciendo significativamente el peso del repositorio.
+    - Se eliminaron todos los componentes de la interfaz de usuario (`src/components/ui`) que no estaban en uso, junto con sus respectivos hooks y utilidades, simplificando la estructura del código.
+    - Se depuraron las imágenes de la carpeta `src/assets/AMBOSS_OPT` eliminando las portadas antiguas que fueron reemplazadas por formatos `.webp` más eficientes.
+    - Se eliminaron archivos de texto temporales y configuraciones de componentes no utilizadas para mantener un entorno de desarrollo limpio y profesional.
