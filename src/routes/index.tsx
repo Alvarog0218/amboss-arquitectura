@@ -192,6 +192,7 @@ function HomePage() {
                 <img
                   src={studioImg}
                   alt="Estudio AMBOSS Arquitectos"
+                  loading="lazy"
                   className="absolute inset-0 h-full w-full scale-[1.1] object-cover transition-transform duration-[1.2s] ease-out group-hover:scale-[1.15]"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-background/20 to-transparent" />
