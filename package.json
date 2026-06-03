@@ -5,9 +5,9 @@
   "type": "module",
   "scripts": {
     "dev": "vite dev",
-    "build": "vite build",
+    "build": "tanstack-start build",
     "build:dev": "vite build --mode development",
-    "preview": "vite preview",
+    "preview": "tanstack-start start",
     "lint": "eslint .",
     "format": "prettier --write ."
   },
