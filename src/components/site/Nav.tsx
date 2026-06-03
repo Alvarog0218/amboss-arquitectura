@@ -45,7 +45,7 @@ export function Nav() {
           <img src={logoMark} alt="AMBOSS" className="hidden h-9 w-9 object-contain md:block" />
           <div className="flex flex-col leading-[0.9]">
             <span className="text-base">AMBOSS</span>
-            <span className="text-[9px] text-primary tracking-[0.45em]">
+            <span className="text-[9px] text-foreground/80 tracking-[0.45em]">
               ARQUITECTOS
             </span>
           </div>
