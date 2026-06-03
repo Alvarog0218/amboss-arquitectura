@@ -44,3 +44,8 @@ Este archivo contiene un registro de los cambios realizados en el proyecto.
     - Se rediseñó la interfaz paso a paso con animaciones fluidas (`framer-motion`), nuevos iconos técnicos y un resumen de presupuesto lateral fijo (sticky) para mejorar la experiencia de usuario.
     - Se integró el simulador con el layout global de la aplicación, habilitando de forma permanente la barra de navegación (`Nav`) y el pie de página (`Footer`) corporativos para una coherencia total con el resto del sitio web.
     - Se optimizó la respuesta móvil y se ajustó la lógica de cotización para redirigir a WhatsApp con un mensaje técnico pre-formateado.
+- Refinamiento Estético del Pie de Página:
+    - Se rediseñó la cabecera del `Footer` para alinear horizontalmente el logotipo de AMBOSS con la frase institucional "Somos arquitectos".
+    - Se ajustaron los tamaños de tipografía y el espaciado (gap) para lograr una composición más equilibrada y de alto impacto visual.
+    - Se aplicó un estilo en mayúsculas (uppercase) a la frase principal para reforzar la identidad arquitectónica y la legibilidad.
+    - Se redistribuyeron las columnas del pie de página para mejorar el flujo visual en pantallas grandes.

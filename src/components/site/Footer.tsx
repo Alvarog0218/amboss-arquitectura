@@ -10,41 +10,42 @@ export function Footer() {
 
       <div className="relative mx-auto max-w-[1600px] px-6 py-20 md:px-10">
         <div className="grid gap-12 md:grid-cols-12">
-          <div className="md:col-span-5">
-            <img src={logoMark} alt="AMBOSS" className="mb-8 h-16 w-16 object-contain" />
-            <p className="font-display text-3xl leading-tight tracking-wide md:text-5xl">
-              Somos
-              <br />
-              <span className="text-primary">arquitectos.</span>
-            </p>
+          <div className="md:col-span-6">
+            <div className="flex items-center gap-5 mb-8 md:gap-7">
+              <img src={logoMark} alt="AMBOSS" className="h-12 w-12 object-contain md:h-16 md:w-16" />
+              <p className="font-display text-3xl leading-[1.1] tracking-tight md:text-5xl lg:text-6xl uppercase">
+                Somos <br />
+                <span className="text-primary">arquitectos.</span>
+              </p>
+            </div>
             <p className="mt-6 max-w-md text-sm leading-relaxed text-muted-foreground">
               AMBOSS Arquitectos. Arquitectura, construcción, reformas, legalización, visualización,
               planimetría, modelado 3D y BIM.
             </p>
           </div>
 
-          <div className="md:col-span-3">
+          <div className="md:col-span-2">
             <p className="mb-4 text-[10px] uppercase tracking-[0.3em] text-muted-foreground">
               Navegación
             </p>
             <ul className="space-y-2 text-sm">
               <li>
-                <Link to="/estudio" className="hover:text-primary">
+                <Link to="/estudio" className="hover:text-primary transition-colors">
                   Estudio
                 </Link>
               </li>
               <li>
-                <Link to="/proyectos" className="hover:text-primary">
+                <Link to="/proyectos" className="hover:text-primary transition-colors">
                   Proyectos
                 </Link>
               </li>
               <li>
-                <Link to="/servicios" className="hover:text-primary">
+                <Link to="/servicios" className="hover:text-primary transition-colors">
                   Servicios
                 </Link>
               </li>
               <li>
-                <Link to="/contacto" className="hover:text-primary">
+                <Link to="/contacto" className="hover:text-primary transition-colors">
                   Contacto
                 </Link>
               </li>
