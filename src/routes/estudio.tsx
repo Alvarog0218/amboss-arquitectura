@@ -7,7 +7,6 @@ import paulaPhoto from "@/assets/PAULA.webp";
 import sebastianPhoto from "@/assets/SEBASTIAN.webp";
 import { SectionNumber } from "@/components/site/SectionNumber";
 import { WallReveal } from "@/components/site/WallReveal";
-import { LiitBand } from "@/components/site/LiitBand";
 
 export const Route = createFileRoute("/estudio")({
   head: () => ({
@@ -238,8 +237,6 @@ function EstudioPage() {
           ))}
         </div>
       </section>
-
-      <LiitBand />
     </>
   );
 }
