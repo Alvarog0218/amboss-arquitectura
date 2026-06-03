@@ -42,5 +42,5 @@ Este archivo contiene un registro de los cambios realizados en el proyecto.
     - Se eliminó el archivo de estilos independiente `simulator.css` para integrar el componente totalmente al sistema de diseño global basado en Tailwind.
     - Se aplicó la identidad visual de la marca: paleta de colores arquitectónica (verde profundo, warm off-white), tipografías oficiales (Metaluna, Anta) y efectos de "blueprint".
     - Se rediseñó la interfaz paso a paso con animaciones fluidas (`framer-motion`), nuevos iconos técnicos y un resumen de presupuesto lateral fijo (sticky) para mejorar la experiencia de usuario.
-    - Se integró el simulador con el layout global, permitiendo que ahora incluya el `Nav` y `Footer` corporativos, manteniendo la coherencia con el resto del sitio web.
+    - Se integró el simulador con el layout global de la aplicación, habilitando de forma permanente la barra de navegación (`Nav`) y el pie de página (`Footer`) corporativos para una coherencia total con el resto del sitio web.
     - Se optimizó la respuesta móvil y se ajustó la lógica de cotización para redirigir a WhatsApp con un mensaje técnico pre-formateado.

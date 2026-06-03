@@ -124,16 +124,14 @@ function RootShell({ children }: { children: React.ReactNode }) {
 
 function RootComponent() {
   const { queryClient } = Route.useRouteContext();
-  const { pathname } = useRouterState({ select: (s) => s.location });
-  const isSimulator = pathname === "/simulador";
 
   return (
     <QueryClientProvider client={queryClient}>
-      {!isSimulator && <Nav />}
-      <main className={!isSimulator ? "min-h-screen" : ""}>
+      <Nav />
+      <main className="min-h-screen">
         <Outlet />
       </main>
-      {!isSimulator && <Footer />}
+      <Footer />
     </QueryClientProvider>
   );
 }
