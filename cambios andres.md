@@ -23,6 +23,7 @@ Este archivo contiene un registro de los cambios realizados en el proyecto.
 - Actualización de imágenes:
     - Se reemplazó la imagen principal de la página de Estudio por el nuevo archivo `ESTUDIO.webp` para mejor rendimiento.
     - Se actualizaron todas las fotos de portada de la sección de Proyectos utilizando las nuevas imágenes en formato `.webp` de la carpeta `src/proyectos`, mejorando la calidad visual y el rendimiento.
+    - Se implementó un filtro sutil y una capa de tinte (overlay) en las portadas de proyectos basada en la paleta de colores de la marca (verde profundo y verde acento). Este efecto se desvanece al pasar el mouse para revelar la imagen original con claridad, manteniendo una estética arquitectónica y profesional coherente en todo el sitio.
 - Ajustes de diseño globales:
     - Se eliminó la enumeración ("01", "02", etc.) de todas las secciones de página y listas en todo el sitio web para lograr un diseño más limpio y minimalista.
     - Se actualizó el componente `SectionNumber.tsx` para mostrar únicamente la etiqueta con una línea decorativa sutil.

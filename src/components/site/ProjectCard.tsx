@@ -27,8 +27,12 @@ export function ProjectCard({ project, index = 0, priority }: Props) {
               src={project.image}
               alt={project.title}
               loading={priority ? "eager" : "lazy"}
-              className="h-full w-full object-cover grayscale-[20%] transition-all duration-[1200ms] ease-out group-hover:scale-[1.04] group-hover:grayscale-0"
+              className="h-full w-full object-cover grayscale-[40%] brightness-[0.85] contrast-[1.1] transition-all duration-[1200ms] ease-out group-hover:scale-[1.04] group-hover:grayscale-0 group-hover:brightness-100"
             />
+            
+            {/* Brand Tint Overlay — Sutil tinte verde/oscuro inicial */}
+            <div className="absolute inset-0 bg-primary/5 mix-blend-multiply transition-opacity duration-700 group-hover:opacity-0" />
+            <div className="absolute inset-0 bg-deep/20 mix-blend-overlay transition-opacity duration-700 group-hover:opacity-0" />
 
             {/* Blueprint overlay — solo en hover */}
             <div className="pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-500 group-hover:opacity-100">
