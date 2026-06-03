@@ -29,3 +29,6 @@ Este archivo contiene un registro de los cambios realizados en el proyecto.
     - Se actualizó el componente `SectionNumber.tsx` para mostrar únicamente la etiqueta con una línea decorativa sutil.
     - Se ajustaron los layouts en las páginas de Inicio, Estudio, Servicios, Proyectos y Contacto para redistribuir el espacio tras la eliminación de los números.
     - Se modificó la barra de navegación para que, en dispositivos móviles y tamaños reducidos, solo se visualice la palabra "**AMBOSS**", ocultando el isotipo y el sufijo "/ ARQUITECTOS".
+- Actualización en la sección de Empresa Aliada (LIIT):
+    - Se eliminó la funcionalidad de descarga de brochure y el archivo PDF asociado de la interfaz.
+    - Se renombró el botón secundario a "**Conocer LIIT**" y se redirigió a la sección de contacto para centralizar las consultas de la alianza.

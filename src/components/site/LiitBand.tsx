@@ -2,7 +2,6 @@ import { Link } from "@tanstack/react-router";
 import { ArrowUpRight } from "lucide-react";
 
 import liitLogo from "@/assets/L.png";
-import liitBrochure from "@/assets/brochure_liit/Brochure_LIIT.pdf?url";
 
 const liitServices = [
   "Arquitectura",
@@ -74,15 +73,13 @@ export function LiitBand() {
               Hablemos del proyecto
               <ArrowUpRight className="h-4 w-4 shrink-0 transition-transform group-hover:rotate-45" />
             </Link>
-            <a
-              href={liitBrochure}
-              target="_blank"
-              rel="noreferrer"
+            <Link
+              to="/contacto"
               className="group inline-flex items-center justify-center gap-4 border border-[#3b4d63]/25 px-6 py-4 text-center text-xs uppercase tracking-[0.25em] text-[#3b4d63]/80 transition-all hover:border-[#3b4d63] hover:text-[#3b4d63]"
             >
-              Ver brochure LIIT
+              Conocer LIIT
               <ArrowUpRight className="h-4 w-4 shrink-0 transition-transform group-hover:rotate-45" />
-            </a>
+            </Link>
           </div>
         </div>
 
