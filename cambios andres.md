@@ -22,6 +22,7 @@ Este archivo contiene un registro de los cambios realizados en el proyecto.
     - Se organizó el archivo del brochure en una carpeta dedicada `src/assets/brochure_liit/Brochure_LIIT.pdf` para asegurar su correcta apertura desde el botón de la sección.
 - Actualización de imágenes:
     - Se reemplazó la imagen principal de la página de Estudio por el nuevo archivo `ESTUDIO.webp` para mejor rendimiento.
+    - Se actualizaron todas las fotos de portada de la sección de Proyectos utilizando las nuevas imágenes en formato `.webp` de la carpeta `src/proyectos`, mejorando la calidad visual y el rendimiento.
 - Ajustes de diseño globales:
     - Se eliminó la enumeración ("01", "02", etc.) de todas las secciones de página y listas en todo el sitio web para lograr un diseño más limpio y minimalista.
     - Se actualizó el componente `SectionNumber.tsx` para mostrar únicamente la etiqueta con una línea decorativa sutil.

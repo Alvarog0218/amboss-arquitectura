@@ -12,62 +12,62 @@ export type Project = {
   services: string[];
 };
 
-import avisinCover from "@/assets/AMBOSS_OPT/avisinCover.jpg";
+import avisinCover from "@/proyectos/AVISIN.webp";
 import avisinGallery1 from "@/assets/AMBOSS_OPT/avisinGallery1.jpg";
 import avisinGallery2 from "@/assets/AMBOSS_OPT/avisinGallery2.jpg";
 import avisinGallery3 from "@/assets/AMBOSS_OPT/avisinGallery3.jpg";
 
-import casaApartadoCover from "@/assets/AMBOSS_OPT/casaApartadoCover.jpg";
+import casaApartadoCover from "@/proyectos/CASA APARTADO.webp";
 import casaApartadoGallery1 from "@/assets/AMBOSS_OPT/casaApartadoGallery1.jpg";
 import casaApartadoGallery2 from "@/assets/AMBOSS_OPT/casaApartadoGallery2.jpg";
 import casaApartadoGallery3 from "@/assets/AMBOSS_OPT/casaApartadoGallery3.jpg";
 
-import coosanandresitoCover from "@/assets/AMBOSS_OPT/coosanandresitoCover.jpg";
+import coosanandresitoCover from "@/proyectos/COO SAN ANDRESITO.webp";
 import coosanandresitoGallery1 from "@/assets/AMBOSS_OPT/coosanandresitoGallery1.jpg";
 import coosanandresitoGallery2 from "@/assets/AMBOSS_OPT/coosanandresitoGallery2.jpg";
 import coosanandresitoGallery3 from "@/assets/AMBOSS_OPT/coosanandresitoGallery3.jpg";
 
-import ecoOroCover from "@/assets/AMBOSS_OPT/ecoOroCover.jpg";
+import ecoOroCover from "@/proyectos/ECO-ORO.webp";
 import ecoOroGallery1 from "@/assets/AMBOSS_OPT/ecoOroGallery1.jpg";
 import ecoOroGallery2 from "@/assets/AMBOSS_OPT/ecoOroGallery2.jpg";
 import ecoOroGallery3 from "@/assets/AMBOSS_OPT/ecoOroGallery3.jpg";
 
-import finecoopCover from "@/assets/AMBOSS_OPT/finecoopCover.jpg";
+import finecoopCover from "@/proyectos/FINECOOP.webp";
 import finecoopGallery1 from "@/assets/AMBOSS_OPT/finecoopGallery1.jpg";
 import finecoopGallery2 from "@/assets/AMBOSS_OPT/finecoopGallery2.jpg";
 import finecoopGallery3 from "@/assets/AMBOSS_OPT/finecoopGallery3.jpg";
 
-import libarDogCover from "@/assets/AMBOSS_OPT/libarDogCover.jpg";
+import libarDogCover from "@/proyectos/LIBARDOG.webp";
 import libarDogGallery1 from "@/assets/AMBOSS_OPT/libarDogGallery1.jpg";
 import libarDogGallery2 from "@/assets/AMBOSS_OPT/libarDogGallery2.jpg";
 import libarDogGallery3 from "@/assets/AMBOSS_OPT/libarDogGallery3.jpg";
 
-import ibgCover from "@/assets/AMBOSS_OPT/ibgCover.jpg";
+import ibgCover from "@/proyectos/IBG INGENIERIA.webp";
 import ibgGallery1 from "@/assets/AMBOSS_OPT/ibgGallery1.jpg";
 import ibgGallery2 from "@/assets/AMBOSS_OPT/ibgGallery2.jpg";
 import ibgGallery3 from "@/assets/AMBOSS_OPT/ibgGallery3.jpg";
 
-import insummaCover from "@/assets/AMBOSS_OPT/insummaCover.jpg";
+import insummaCover from "@/proyectos/INSUMMA BG.webp";
 import insummaGallery1 from "@/assets/AMBOSS_OPT/insummaGallery1.jpg";
 import insummaGallery2 from "@/assets/AMBOSS_OPT/insummaGallery2.jpg";
 import insummaGallery3 from "@/assets/AMBOSS_OPT/insummaGallery3.jpg";
 
-import laEconomicaCover from "@/assets/AMBOSS_OPT/laEconomicaCover.jpg";
+import laEconomicaCover from "@/proyectos/LA ECONIMICA.webp";
 import laEconomicaGallery1 from "@/assets/AMBOSS_OPT/laEconomicaGallery1.jpg";
 import laEconomicaGallery2 from "@/assets/AMBOSS_OPT/laEconomicaGallery2.jpg";
 import laEconomicaGallery3 from "@/assets/AMBOSS_OPT/laEconomicaGallery3.jpg";
 
-import losRoblesCover from "@/assets/AMBOSS_OPT/losRoblesCover.jpg";
+import losRoblesCover from "@/proyectos/LOS ROBLES.webp";
 import losRoblesGallery1 from "@/assets/AMBOSS_OPT/losRoblesGallery1.jpg";
 import losRoblesGallery2 from "@/assets/AMBOSS_OPT/losRoblesGallery2.jpg";
 import losRoblesGallery3 from "@/assets/AMBOSS_OPT/losRoblesGallery3.jpg";
 
-import teslaCover from "@/assets/AMBOSS_OPT/teslaCover.jpg";
+import teslaCover from "@/proyectos/TESLA.webp";
 import teslaGallery1 from "@/assets/AMBOSS_OPT/teslaGallery1.jpg";
 import teslaGallery2 from "@/assets/AMBOSS_OPT/teslaGallery2.jpg";
 import teslaGallery3 from "@/assets/AMBOSS_OPT/teslaGallery3.jpg";
 
-import vegaCover from "@/assets/AMBOSS_OPT/vegaCover.jpg";
+import vegaCover from "@/proyectos/VEGA CAMPESTRE.webp";
 import vegaGallery1 from "@/assets/AMBOSS_OPT/vegaGallery1.jpg";
 import vegaGallery2 from "@/assets/AMBOSS_OPT/vegaGallery2.jpg";
 import vegaGallery3 from "@/assets/AMBOSS_OPT/vegaGallery3.jpg";
