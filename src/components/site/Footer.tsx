@@ -11,9 +11,9 @@ export function Footer() {
       <div className="relative mx-auto max-w-[1600px] px-6 py-20 md:px-10">
         <div className="grid gap-12 md:grid-cols-12">
           <div className="md:col-span-6">
-            <div className="flex items-center gap-5 mb-8 md:gap-7">
-              <img src={logoMark} alt="AMBOSS" className="h-10 w-10 object-contain md:h-14 md:w-14" />
-              <p className="font-display text-2xl leading-[1.1] tracking-tight md:text-4xl lg:text-5xl uppercase">
+            <div className="flex items-center gap-4 mb-8 md:gap-6">
+              <img src={logoMark} alt="AMBOSS" className="h-8 w-8 object-contain md:h-12 md:w-12" />
+              <p className="font-display text-xl leading-[1.1] tracking-tight md:text-3xl lg:text-4xl uppercase">
                 Somos <br />
                 <span className="text-primary">arquitectos.</span>
               </p>
