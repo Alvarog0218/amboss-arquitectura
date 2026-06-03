@@ -12,8 +12,8 @@ export function Footer() {
         <div className="grid gap-12 md:grid-cols-12">
           <div className="md:col-span-6">
             <div className="flex items-center gap-5 mb-8 md:gap-7">
-              <img src={logoMark} alt="AMBOSS" className="h-12 w-12 object-contain md:h-16 md:w-16" />
-              <p className="font-display text-3xl leading-[1.1] tracking-tight md:text-5xl lg:text-6xl uppercase">
+              <img src={logoMark} alt="AMBOSS" className="h-10 w-10 object-contain md:h-14 md:w-14" />
+              <p className="font-display text-2xl leading-[1.1] tracking-tight md:text-4xl lg:text-5xl uppercase">
                 Somos <br />
                 <span className="text-primary">arquitectos.</span>
               </p>

@@ -46,6 +46,6 @@ Este archivo contiene un registro de los cambios realizados en el proyecto.
     - Se optimizó la respuesta móvil y se ajustó la lógica de cotización para redirigir a WhatsApp con un mensaje técnico pre-formateado.
 - Refinamiento Estético del Pie de Página:
     - Se rediseñó la cabecera del `Footer` para alinear horizontalmente el logotipo de AMBOSS con la frase institucional "Somos arquitectos".
-    - Se ajustaron los tamaños de tipografía y el espaciado (gap) para lograr una composición más equilibrada y de alto impacto visual.
+    - Se ajustaron los tamaños de tipografía (reduciendo a `5xl` en desktop y `4xl` en tablets) y el logotipo para evitar interferencias con los menús de navegación y asegurar una visualización correcta en todas las resoluciones.
     - Se aplicó un estilo en mayúsculas (uppercase) a la frase principal para reforzar la identidad arquitectónica y la legibilidad.
     - Se redistribuyeron las columnas del pie de página para mejorar el flujo visual en pantallas grandes.
