@@ -43,10 +43,12 @@ export function Nav() {
           className="flex items-center gap-3 font-display text-sm tracking-[0.35em] text-foreground"
         >
           <img src={logoMark} alt="AMBOSS" className="hidden h-9 w-9 object-contain md:block" />
-          <span className="text-base">AMBOSS</span>
-          <span className="hidden text-[10px] text-muted-foreground lg:inline">
-            / ARQUITECTOS
-          </span>
+          <div className="flex flex-col leading-[0.9]">
+            <span className="text-base">AMBOSS</span>
+            <span className="text-[9px] text-primary tracking-[0.45em]">
+              ARQUITECTOS
+            </span>
+          </div>
         </Link>
 
         <nav className="hidden items-center gap-10 md:flex">

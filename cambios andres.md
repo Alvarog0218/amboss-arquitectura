@@ -49,3 +49,7 @@ Este archivo contiene un registro de los cambios realizados en el proyecto.
     - Se ajustaron los tamaños de tipografía (reduciendo a `5xl` en desktop y `4xl` en tablets) y el logotipo para evitar interferencias con los menús de navegación y asegurar una visualización correcta en todas las resoluciones.
     - Se aplicó un estilo en mayúsculas (uppercase) a la frase principal para reforzar la identidad arquitectónica y la legibilidad.
     - Se redistribuyeron las columnas del pie de página para mejorar el flujo visual en pantallas grandes.
+- Ajuste de Marca en la Barra de Navegación:
+    - Se rediseñó el logotipo textual para apilar verticalmente "AMBOSS" y "ARQUITECTOS".
+    - Se eliminó el separador horizontal (slash) y se habilitó la visibilidad permanente del subtítulo en todos los dispositivos.
+    - Se optimizó el interlineado y el espaciado entre letras (tracking) para una composición compacta y profesional.
