@@ -11,10 +11,11 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as SimuladorRouteImport } from './routes/simulador'
 import { Route as ServiciosRouteImport } from './routes/servicios'
+import { Route as QuienesSomosRouteImport } from './routes/quienes-somos'
 import { Route as ProyectosRouteImport } from './routes/proyectos'
-import { Route as EstudioRouteImport } from './routes/estudio'
 import { Route as ContactoRouteImport } from './routes/contacto'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as ProyectosIndexRouteImport } from './routes/proyectos.index'
 import { Route as ProyectosSlugRouteImport } from './routes/proyectos.$slug'
 
 const SimuladorRoute = SimuladorRouteImport.update({
@@ -27,14 +28,14 @@ const ServiciosRoute = ServiciosRouteImport.update({
   path: '/servicios',
   getParentRoute: () => rootRouteImport,
 } as any)
+const QuienesSomosRoute = QuienesSomosRouteImport.update({
+  id: '/quienes-somos',
+  path: '/quienes-somos',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const ProyectosRoute = ProyectosRouteImport.update({
   id: '/proyectos',
   path: '/proyectos',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const EstudioRoute = EstudioRouteImport.update({
-  id: '/estudio',
-  path: '/estudio',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ContactoRoute = ContactoRouteImport.update({
@@ -47,6 +48,11 @@ const IndexRoute = IndexRouteImport.update({
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ProyectosIndexRoute = ProyectosIndexRouteImport.update({
+  id: '/',
+  path: '/',
+  getParentRoute: () => ProyectosRoute,
+} as any)
 const ProyectosSlugRoute = ProyectosSlugRouteImport.update({
   id: '/$slug',
   path: '/$slug',
@@ -56,66 +62,70 @@ const ProyectosSlugRoute = ProyectosSlugRouteImport.update({
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/contacto': typeof ContactoRoute
-  '/estudio': typeof EstudioRoute
   '/proyectos': typeof ProyectosRouteWithChildren
+  '/quienes-somos': typeof QuienesSomosRoute
   '/servicios': typeof ServiciosRoute
   '/simulador': typeof SimuladorRoute
   '/proyectos/$slug': typeof ProyectosSlugRoute
+  '/proyectos/': typeof ProyectosIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/contacto': typeof ContactoRoute
-  '/estudio': typeof EstudioRoute
-  '/proyectos': typeof ProyectosRouteWithChildren
+  '/quienes-somos': typeof QuienesSomosRoute
   '/servicios': typeof ServiciosRoute
   '/simulador': typeof SimuladorRoute
   '/proyectos/$slug': typeof ProyectosSlugRoute
+  '/proyectos': typeof ProyectosIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/contacto': typeof ContactoRoute
-  '/estudio': typeof EstudioRoute
   '/proyectos': typeof ProyectosRouteWithChildren
+  '/quienes-somos': typeof QuienesSomosRoute
   '/servicios': typeof ServiciosRoute
   '/simulador': typeof SimuladorRoute
   '/proyectos/$slug': typeof ProyectosSlugRoute
+  '/proyectos/': typeof ProyectosIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
     | '/'
     | '/contacto'
-    | '/estudio'
     | '/proyectos'
+    | '/quienes-somos'
     | '/servicios'
     | '/simulador'
     | '/proyectos/$slug'
+    | '/proyectos/'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
     | '/contacto'
-    | '/estudio'
-    | '/proyectos'
+    | '/quienes-somos'
     | '/servicios'
     | '/simulador'
     | '/proyectos/$slug'
+    | '/proyectos'
   id:
     | '__root__'
     | '/'
     | '/contacto'
-    | '/estudio'
     | '/proyectos'
+    | '/quienes-somos'
     | '/servicios'
     | '/simulador'
     | '/proyectos/$slug'
+    | '/proyectos/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   ContactoRoute: typeof ContactoRoute
-  EstudioRoute: typeof EstudioRoute
   ProyectosRoute: typeof ProyectosRouteWithChildren
+  QuienesSomosRoute: typeof QuienesSomosRoute
   ServiciosRoute: typeof ServiciosRoute
   SimuladorRoute: typeof SimuladorRoute
 }
@@ -136,18 +146,18 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ServiciosRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/quienes-somos': {
+      id: '/quienes-somos'
+      path: '/quienes-somos'
+      fullPath: '/quienes-somos'
+      preLoaderRoute: typeof QuienesSomosRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/proyectos': {
       id: '/proyectos'
       path: '/proyectos'
       fullPath: '/proyectos'
       preLoaderRoute: typeof ProyectosRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/estudio': {
-      id: '/estudio'
-      path: '/estudio'
-      fullPath: '/estudio'
-      preLoaderRoute: typeof EstudioRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/contacto': {
@@ -164,6 +174,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/proyectos/': {
+      id: '/proyectos/'
+      path: '/'
+      fullPath: '/proyectos/'
+      preLoaderRoute: typeof ProyectosIndexRouteImport
+      parentRoute: typeof ProyectosRoute
+    }
     '/proyectos/$slug': {
       id: '/proyectos/$slug'
       path: '/$slug'
@@ -176,10 +193,12 @@ declare module '@tanstack/react-router' {
 
 interface ProyectosRouteChildren {
   ProyectosSlugRoute: typeof ProyectosSlugRoute
+  ProyectosIndexRoute: typeof ProyectosIndexRoute
 }
 
 const ProyectosRouteChildren: ProyectosRouteChildren = {
   ProyectosSlugRoute: ProyectosSlugRoute,
+  ProyectosIndexRoute: ProyectosIndexRoute,
 }
 
 const ProyectosRouteWithChildren = ProyectosRoute._addFileChildren(
@@ -189,8 +208,8 @@ const ProyectosRouteWithChildren = ProyectosRoute._addFileChildren(
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   ContactoRoute: ContactoRoute,
-  EstudioRoute: EstudioRoute,
   ProyectosRoute: ProyectosRouteWithChildren,
+  QuienesSomosRoute: QuienesSomosRoute,
   ServiciosRoute: ServiciosRoute,
   SimuladorRoute: SimuladorRoute,
 }

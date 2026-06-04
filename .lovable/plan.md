@@ -1,7 +1,6 @@
-
 # Propuesta web — AMBOSS Arquitectos
 
-Un sitio editorial, minimalista y de alto impacto visual que respira la identidad del manual: negro, verdes profundos (#253b28 / #416644), grises (#96928f / #d6d6d6), tipografías **Metalluna** (títulos) y **Anta** (texto). El sitio se siente como un portafolio de estudio premium (referentes: Herzog & de Meuron, BIG, Foster+Partners) con una capa de interacción que evoca *gestos arquitectónicos*: planos que se despliegan, módulos que se ensamblan, secciones que se construyen al hacer scroll.
+Un sitio editorial, minimalista y de alto impacto visual que respira la identidad del manual: negro, verdes profundos (#253b28 / #416644), grises (#96928f / #d6d6d6), tipografías **Metalluna** (títulos) y **Anta** (texto). El sitio se siente como un portafolio de estudio premium (referentes: Herzog & de Meuron, BIG, Foster+Partners) con una capa de interacción que evoca _gestos arquitectónicos_: planos que se despliegan, módulos que se ensamblan, secciones que se construyen al hacer scroll.
 
 ## Identidad visual aplicada
 
@@ -23,6 +22,7 @@ Un sitio editorial, minimalista y de alto impacto visual que respira la identida
 ## Página por página
 
 **Home**
+
 - Hero a pantalla completa: video/imagen de obra con overlay verde sutil; titular Metalluna gigante con efecto de "construcción" letra por letra (clip-path reveal vertical, como un muro que sube).
 - Manifiesto corto con scroll horizontal de palabras clave.
 - 3 proyectos destacados en layout asimétrico con hover de "plano técnico" (al pasar el mouse aparecen cotas, ejes y medidas sobre la imagen).
@@ -31,26 +31,31 @@ Un sitio editorial, minimalista y de alto impacto visual que respira la identida
 - Footer arquitectónico con retícula y datos.
 
 **Estudio**
+
 - Sección "Sobre nosotros" con el texto del manual reescrito en clave web.
 - Línea de tiempo vertical animada (los hitos aparecen como bloques que se "ensamblan" desde la izquierda).
 - **Bloque dedicado "Empresa hermana: LIIT"** — banda destacada explicando la sinergia, con logo LIIT, enlace externo y CTA "Conocer LIIT".
 - Equipo en grilla minimalista (foto B/N + nombre + rol).
 
 **Proyectos**
+
 - Grid masonry con filtros por categoría (Residencial, Comercial, Institucional, Interiorismo).
 - Cada tarjeta: foto, año, ubicación, categoría. Hover muestra "ficha técnica" superpuesta.
 - Transición de página al detalle: la tarjeta se expande hacia el viewport (shared-element style con view-transitions / Motion).
 
 **Detalle de proyecto**
+
 - Hero con título + datos (cliente, año, área, ubicación).
 - Galería tipo scroll-stack (las imágenes se apilan y se reemplazan al hacer scroll).
 - Bloque de "planos" con SVG que se dibujan al entrar en viewport (stroke-dashoffset).
 - Proyectos relacionados al final.
 
 **Servicios**
+
 - 4 servicios como módulos apilables; al hacer hover/click se "abren" como cajones revelando descripción (acordeón con animación de profundidad).
 
 **Contacto**
+
 - Formulario minimalista (nombre, email, tipo de proyecto, mensaje).
 - Datos de contacto, redes (@amboss.arquitectura), mapa embebido en estética monocroma.
 - Mención de LIIT al pie con enlace.
@@ -79,7 +84,7 @@ Stack de animación: **Motion (Framer Motion)** + CSS clip-path/transform + `Int
 
 - **Stack**: TanStack Start (ya configurado), Tailwind v4, shadcn/ui, Motion para animaciones, Lucide para íconos base (estilizados a línea fina).
 - **Tokens en `src/styles.css`**: se reescriben `--background`, `--foreground`, `--primary` (verde 416644), `--accent` (verde 253b28), `--muted` (grises), radios pequeños (estética arquitectónica recta).
-- **Fuentes**: `@import` de Anta desde Google Fonts; Metalluna como `@font-face` (placeholder hasta que se provea el archivo, fallback a una display sans con personalidad similar como *Syncopate* o *Big Shoulders Display*).
+- **Fuentes**: `@import` de Anta desde Google Fonts; Metalluna como `@font-face` (placeholder hasta que se provea el archivo, fallback a una display sans con personalidad similar como _Syncopate_ o _Big Shoulders Display_).
 - **Imágenes**: placeholders generados con `imagegen` representando arquitectura contemporánea (concreto, vidrio, vegetación) en tratamiento monocromo + acento verde. Cuando tengas fotos reales, se reemplazan.
 - **SEO**: cada ruta con `head()` propio (title, description, og:image), JSON-LD de `Organization` y `LocalBusiness`.
 - **Performance**: imágenes lazy, animaciones con `prefers-reduced-motion` respetado.

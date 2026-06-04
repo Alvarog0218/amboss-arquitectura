@@ -6,7 +6,7 @@ import logoMark from "@/assets/A.png";
 
 const links = [
   { to: "/", label: "Inicio" },
-  { to: "/estudio", label: "Estudio" },
+  { to: "/quienes-somos", label: "Quiénes Somos" },
   { to: "/proyectos", label: "Proyectos" },
   { to: "/servicios", label: "Servicios" },
   { to: "/simulador", label: "Simulador" },
@@ -45,9 +45,7 @@ export function Nav() {
           <img src={logoMark} alt="AMBOSS" className="hidden h-9 w-9 object-contain md:block" />
           <div className="flex flex-col leading-[0.9]">
             <span className="text-base">AMBOSS</span>
-            <span className="text-[9px] text-foreground/80 tracking-[0.45em]">
-              ARQUITECTOS
-            </span>
+            <span className="text-[9px] text-foreground/80 tracking-[0.45em]">ARQUITECTOS</span>
           </div>
         </Link>
 

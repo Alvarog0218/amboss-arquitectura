@@ -184,7 +184,7 @@ function HomePage() {
 
       {/* ===== ABOUT INTRO ===== */}
       <section className="relative mx-auto max-w-[1600px] px-6 py-28 md:px-10 md:py-40">
-        <SectionNumber label="Estudio" />
+        <SectionNumber label="Quiénes Somos" />
         <div className="mt-12 grid gap-12 md:grid-cols-12 md:gap-16">
           {/* Visual column */}
           <div className="md:col-span-5">
@@ -192,7 +192,7 @@ function HomePage() {
               <div className="group relative aspect-square w-full overflow-hidden border border-border bg-secondary">
                 <img
                   src={studioImg}
-                  alt="Estudio AMBOSS Arquitectos"
+                  alt="AMBOSS Arquitectos"
                   loading="lazy"
                   className="absolute inset-0 h-full w-full scale-[1.1] object-cover transition-transform duration-[1.2s] ease-out group-hover:scale-[1.15]"
                 />
@@ -265,10 +265,10 @@ function HomePage() {
             </WallReveal>
             <WallReveal delay={0.3}>
               <Link
-                to="/estudio"
+                to="/quienes-somos"
                 className="group mt-10 inline-flex items-center gap-3 text-xs uppercase tracking-[0.3em] text-primary"
               >
-                Conocer el estudio
+                Conocer más
                 <span className="h-px w-10 bg-primary transition-all group-hover:w-16" />
               </Link>
             </WallReveal>

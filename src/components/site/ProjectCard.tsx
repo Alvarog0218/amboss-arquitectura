@@ -30,7 +30,7 @@ export function ProjectCard({ project, index = 0, priority }: Props) {
               fetchPriority={priority ? "high" : "auto"}
               className="h-full w-full object-cover grayscale-[40%] brightness-[0.85] contrast-[1.1] transition-all duration-[1200ms] ease-out group-hover:scale-[1.04] group-hover:grayscale-0 group-hover:brightness-100"
             />
-            
+
             {/* Brand Tint Overlay — Sutil tinte verde/oscuro inicial */}
             <div className="absolute inset-0 bg-primary/5 mix-blend-multiply transition-opacity duration-700 group-hover:opacity-0" />
             <div className="absolute inset-0 bg-deep/20 mix-blend-overlay transition-opacity duration-700 group-hover:opacity-0" />

@@ -3,53 +3,54 @@
 Este archivo contiene un registro de los cambios realizados en el proyecto.
 
 ## [2026-06-02]
+
 - Creación del archivo `cambios andres.md` para seguimiento de actividades.
 - Implementación del Simulador de Proyectos:
-    - Se portaron los archivos `simulator.html`, `simulator.js` y `style.css` a una nueva ruta en React.
-    - Nueva ruta creada: `/simulador` (`src/routes/simulador.tsx`).
-    - Se extrajeron los estilos específicos a `src/simulator.css`.
-    - Integración de lógica de cálculo y navegación por pasos en React.
-    - Se añadió el enlace al Simulador en la barra de navegación principal.
-    - Se configuró la aplicación para ocultar el Nav y Footer global en la página del simulador para mantener su diseño original.
+  - Se portaron los archivos `simulator.html`, `simulator.js` y `style.css` a una nueva ruta en React.
+  - Nueva ruta creada: `/simulador` (`src/routes/simulador.tsx`).
+  - Se extrajeron los estilos específicos a `src/simulator.css`.
+  - Integración de lógica de cálculo y navegación por pasos en React.
+  - Se añadió el enlace al Simulador en la barra de navegación principal.
+  - Se configuró la aplicación para ocultar el Nav y Footer global en la página del simulador para mantener su diseño original.
 - Ajustes de diseño en el Footer:
-    - Se eliminó la enumeración ("01 /", "02 /") de las secciones de Navegación y Contacto para un diseño más limpio.
+  - Se eliminó la enumeración ("01 /", "02 /") de las secciones de Navegación y Contacto para un diseño más limpio.
 - Actualización de Identidad Visual para LIIT (Empresa Hermana):
-    - Se aplicó la paleta de colores oficial: **Marrón/Granate (#4d1f2e)** para textos y elementos de marca sobre un fondo claro **#bfaf91**.
-    - Se integró la tipografía **Poppins** vía Google Fonts para las secciones de LIIT.
-    - Se actualizó el componente `LiitBand.tsx` con los nuevos estilos, textos del brochure y ajustes de contraste para el fondo claro.
-    - Se aplicó el color **#3b4d63** (azul grisáceo) a todos los títulos y elementos destacados de la sección para una identidad visual coherente.
-    - Se renombró la sección "Empresa hermana" a "**Empresa aliada**" y se eliminó la enumeración ("04") para alinearse con el nuevo estilo global.
-    - Se organizó el archivo del brochure en una carpeta dedicada `src/assets/brochure_liit/Brochure_LIIT.pdf` para asegurar su correcta apertura desde el botón de la sección.
+  - Se aplicó la paleta de colores oficial: **Marrón/Granate (#4d1f2e)** para textos y elementos de marca sobre un fondo claro **#bfaf91**.
+  - Se integró la tipografía **Poppins** vía Google Fonts para las secciones de LIIT.
+  - Se actualizó el componente `LiitBand.tsx` con los nuevos estilos, textos del brochure y ajustes de contraste para el fondo claro.
+  - Se aplicó el color **#3b4d63** (azul grisáceo) a todos los títulos y elementos destacados de la sección para una identidad visual coherente.
+  - Se renombró la sección "Empresa hermana" a "**Empresa aliada**" y se eliminó la enumeración ("04") para alinearse con el nuevo estilo global.
+  - Se organizó el archivo del brochure en una carpeta dedicada `src/assets/brochure_liit/Brochure_LIIT.pdf` para asegurar su correcta apertura desde el botón de la sección.
 - Actualización de imágenes:
-    - Se reemplazó la imagen principal de la página de Estudio por el nuevo archivo `ESTUDIO.webp` para mejor rendimiento.
-    - Se actualizaron todas las fotos de portada de la sección de Proyectos utilizando las nuevas imágenes en formato `.webp` de la carpeta `src/proyectos`, mejorando la calidad visual y el rendimiento.
-    - Se implementó un filtro sutil y una capa de tinte (overlay) en las portadas de proyectos basada en la paleta de colores de la marca (verde profundo y verde acento). Este efecto se desvanece al pasar el mouse para revelar la imagen original con claridad, manteniendo una estética arquitectónica y profesional coherente en todo el sitio.
+  - Se reemplazó la imagen principal de la página de Estudio por el nuevo archivo `ESTUDIO.webp` para mejor rendimiento.
+  - Se actualizaron todas las fotos de portada de la sección de Proyectos utilizando las nuevas imágenes en formato `.webp` de la carpeta `src/proyectos`, mejorando la calidad visual y el rendimiento.
+  - Se implementó un filtro sutil y una capa de tinte (overlay) en las portadas de proyectos basada en la paleta de colores de la marca (verde profundo y verde acento). Este efecto se desvanece al pasar el mouse para revelar la imagen original con claridad, manteniendo una estética arquitectónica y profesional coherente en todo el sitio.
 - Ajustes de diseño globales:
-    - Se eliminó la enumeración ("01", "02", etc.) de todas las secciones de página y listas en todo el sitio web para lograr un diseño más limpio y minimalista.
-    - Se actualizó el componente `SectionNumber.tsx` para mostrar únicamente la etiqueta con una línea decorativa sutil.
-    - Se ajustaron los layouts en las páginas de Inicio, Estudio, Servicios, Proyectos y Contacto para redistribuir el espacio tras la eliminación de los números.
-    - Se modificó la barra de navegación para que, en dispositivos móviles y tamaños reducidos, solo se visualice la palabra "**AMBOSS**", ocultando el isotipo y el sufijo "/ ARQUITECTOS".
+  - Se eliminó la enumeración ("01", "02", etc.) de todas las secciones de página y listas en todo el sitio web para lograr un diseño más limpio y minimalista.
+  - Se actualizó el componente `SectionNumber.tsx` para mostrar únicamente la etiqueta con una línea decorativa sutil.
+  - Se ajustaron los layouts en las páginas de Inicio, Estudio, Servicios, Proyectos y Contacto para redistribuir el espacio tras la eliminación de los números.
+  - Se modificó la barra de navegación para que, en dispositivos móviles y tamaños reducidos, solo se visualice la palabra "**AMBOSS**", ocultando el isotipo y el sufijo "/ ARQUITECTOS".
 - Actualización en la sección de Empresa Aliada (LIIT):
-    - Se eliminó la funcionalidad de descarga de brochure y el archivo PDF asociado de la interfaz.
-    - Se renombró el botón secundario a "**Conocer LIIT**" y se redirigió a la sección de contacto para centralizar las consultas de la alianza.
+  - Se eliminó la funcionalidad de descarga de brochure y el archivo PDF asociado de la interfaz.
+  - Se renombró el botón secundario a "**Conocer LIIT**" y se redirigió a la sección de contacto para centralizar las consultas de la alianza.
 - Limpieza y Optimización del Proyecto:
-    - Se eliminaron más de **1 GB** de archivos innecesarios, incluyendo fotos en alta resolución sin optimizar (`DSC0*`), imágenes de proyectos redundantes y carpetas temporales (`src/Fotos 1`).
-    - Se removieron archivos PDF de gran tamaño (manuales de marca y brochures antiguos) que se encontraban en la raíz del proyecto y en carpetas de assets, reduciendo significativamente el peso del repositorio.
-    - Se eliminaron todos los componentes de la interfaz de usuario (`src/components/ui`) que no estaban en uso, junto con sus respectivos hooks y utilidades, simplificando la estructura del código.
-    - Se depuraron las imágenes de la carpeta `src/assets/AMBOSS_OPT` eliminando las portadas antiguas que fueron reemplazadas por formatos `.webp` más eficientes.
-    - Se eliminaron archivos de texto temporales y configuraciones de componentes no utilizadas para mantener un entorno de desarrollo limpio y profesional.
+  - Se eliminaron más de **1 GB** de archivos innecesarios, incluyendo fotos en alta resolución sin optimizar (`DSC0*`), imágenes de proyectos redundantes y carpetas temporales (`src/Fotos 1`).
+  - Se removieron archivos PDF de gran tamaño (manuales de marca y brochures antiguos) que se encontraban en la raíz del proyecto y en carpetas de assets, reduciendo significativamente el peso del repositorio.
+  - Se eliminaron todos los componentes de la interfaz de usuario (`src/components/ui`) que no estaban en uso, junto con sus respectivos hooks y utilidades, simplificando la estructura del código.
+  - Se depuraron las imágenes de la carpeta `src/assets/AMBOSS_OPT` eliminando las portadas antiguas que fueron reemplazadas por formatos `.webp` más eficientes.
+  - Se eliminaron archivos de texto temporales y configuraciones de componentes no utilizadas para mantener un entorno de desarrollo limpio y profesional.
 - Rediseño Integral del Simulador de Proyectos:
-    - Se eliminó el archivo de estilos independiente `simulator.css` para integrar el componente totalmente al sistema de diseño global basado en Tailwind.
-    - Se aplicó la identidad visual de la marca: paleta de colores arquitectónica (verde profundo, warm off-white), tipografías oficiales (Metaluna, Anta) y efectos de "blueprint".
-    - Se rediseñó la interfaz paso a paso con animaciones fluidas (`framer-motion`), nuevos iconos técnicos y un resumen de presupuesto lateral fijo (sticky) para mejorar la experiencia de usuario.
-    - Se integró el simulador con el layout global de la aplicación, habilitando de forma permanente la barra de navegación (`Nav`) y el pie de página (`Footer`) corporativos para una coherencia total con el resto del sitio web.
-    - Se optimizó la respuesta móvil y se ajustó la lógica de cotización para redirigir a WhatsApp con un mensaje técnico pre-formateado.
+  - Se eliminó el archivo de estilos independiente `simulator.css` para integrar el componente totalmente al sistema de diseño global basado en Tailwind.
+  - Se aplicó la identidad visual de la marca: paleta de colores arquitectónica (verde profundo, warm off-white), tipografías oficiales (Metaluna, Anta) y efectos de "blueprint".
+  - Se rediseñó la interfaz paso a paso con animaciones fluidas (`framer-motion`), nuevos iconos técnicos y un resumen de presupuesto lateral fijo (sticky) para mejorar la experiencia de usuario.
+  - Se integró el simulador con el layout global de la aplicación, habilitando de forma permanente la barra de navegación (`Nav`) y el pie de página (`Footer`) corporativos para una coherencia total con el resto del sitio web.
+  - Se optimizó la respuesta móvil y se ajustó la lógica de cotización para redirigir a WhatsApp con un mensaje técnico pre-formateado.
 - Refinamiento Estético del Pie de Página:
-    - Se rediseñó la cabecera del `Footer` para alinear horizontalmente el logotipo de AMBOSS con la frase institucional "Somos arquitectos".
-    - Se ajustaron los tamaños de tipografía (reduciendo a `5xl` en desktop y `4xl` en tablets) y el logotipo para evitar interferencias con los menús de navegación y asegurar una visualización correcta en todas las resoluciones.
-    - Se aplicó un estilo en mayúsculas (uppercase) a la frase principal para reforzar la identidad arquitectónica y la legibilidad.
-    - Se redistribuyeron las columnas del pie de página para mejorar el flujo visual en pantallas grandes.
+  - Se rediseñó la cabecera del `Footer` para alinear horizontalmente el logotipo de AMBOSS con la frase institucional "Somos arquitectos".
+  - Se ajustaron los tamaños de tipografía (reduciendo a `5xl` en desktop y `4xl` en tablets) y el logotipo para evitar interferencias con los menús de navegación y asegurar una visualización correcta en todas las resoluciones.
+  - Se aplicó un estilo en mayúsculas (uppercase) a la frase principal para reforzar la identidad arquitectónica y la legibilidad.
+  - Se redistribuyeron las columnas del pie de página para mejorar el flujo visual en pantallas grandes.
 - Ajuste de Marca en la Barra de Navegación:
-    - Se rediseñó el logotipo textual para apilar verticalmente "AMBOSS" y "ARQUITECTOS".
-    - Se eliminó el separador horizontal (slash) y se habilitó la visibilidad permanente del subtítulo en todos los dispositivos.
-    - Se optimizó el interlineado y el espaciado entre letras (tracking) para una composición compacta y profesional.
+  - Se rediseñó el logotipo textual para apilar verticalmente "AMBOSS" y "ARQUITECTOS".
+  - Se eliminó el separador horizontal (slash) y se habilitó la visibilidad permanente del subtítulo en todos los dispositivos.
+  - Se optimizó el interlineado y el espaciado entre letras (tracking) para una composición compacta y profesional.
