@@ -27,6 +27,7 @@ export function ProjectCard({ project, index = 0, priority }: Props) {
               src={project.image}
               alt={project.title}
               loading={priority ? "eager" : "lazy"}
+              fetchPriority={priority ? "high" : "auto"}
               className="h-full w-full object-cover grayscale-[40%] brightness-[0.85] contrast-[1.1] transition-all duration-[1200ms] ease-out group-hover:scale-[1.04] group-hover:grayscale-0 group-hover:brightness-100"
             />
             

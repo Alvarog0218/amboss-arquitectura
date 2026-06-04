@@ -76,6 +76,7 @@ function HomePage() {
           alt="AMBOSS Arquitectos"
           width={1920}
           height={1280}
+          fetchPriority="high"
           className="absolute inset-0 h-full w-full object-cover"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-background/40 via-background/30 to-background" />

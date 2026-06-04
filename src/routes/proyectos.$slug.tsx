@@ -136,6 +136,7 @@ function ProjectDetail() {
             src={project.image}
             alt={project.title}
             loading="eager"
+            fetchPriority="high"
             className="aspect-[16/10] w-full object-cover"
           />
         </div>
