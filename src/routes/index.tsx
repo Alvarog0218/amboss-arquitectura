@@ -1,6 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { motion } from "motion/react";
-import { ArrowDown, ArrowUpRight } from "lucide-react";
+import { ArrowDown, ArrowUpRight, Compass, Eye, DollarSign, HardHat, FileText } from "lucide-react";
 
 import hero from "@/assets/hero.jpg";
 import studioImg from "@/assets/ESTUDIO.webp";
@@ -41,27 +41,11 @@ const manifesto = [
 ];
 
 const services = [
-  { n: "01", title: "Diseño integral", desc: "Oficinas, locales, vivienda y cadenas comerciales." },
-  {
-    n: "02",
-    title: "Construcción y reforma",
-    desc: "Obras civiles con coordinación técnica integral.",
-  },
-  {
-    n: "03",
-    title: "Legalización de proyectos",
-    desc: "Trámites ante entidades y acompañamiento documental.",
-  },
-  {
-    n: "04",
-    title: "Visualización inmobiliaria",
-    desc: "Factibilidad, parcelación y comunicación visual del proyecto.",
-  },
-  {
-    n: "05",
-    title: "Planimetría y modelado",
-    desc: "Planos, modelos 3D e implementación de metodología BIM.",
-  },
+  { n: "01", icon: Compass, title: "Diseño integral", desc: "Oficinas, locales, vivienda y cadenas comerciales." },
+  { n: "02", icon: HardHat, title: "Construcción y reforma", desc: "Obras civiles con coordinación técnica integral." },
+  { n: "03", icon: FileText, title: "Legalización de proyectos", desc: "Trámites ante entidades y acompañamiento documental." },
+  { n: "04", icon: Eye, title: "Visualización inmobiliaria", desc: "Factibilidad, parcelación y comunicación visual del proyecto." },
+  { n: "05", icon: DollarSign, title: "Planimetría y modelado", desc: "Planos, modelos 3D e implementación de metodología BIM." },
 ];
 
 function HomePage() {
@@ -166,7 +150,7 @@ function HomePage() {
       </section>
 
       {/* ===== MANIFIESTO MARQUEE ===== */}
-      <section className="border-y border-border bg-secondary py-8 md:py-12">
+      <section className="bg-background py-8 md:py-12">
         <div className="flex overflow-hidden">
           <div className="marquee flex shrink-0 items-center gap-16 pr-16 md:gap-24 md:pr-24">
             {[...manifesto, ...manifesto, ...manifesto].map((word, i) => (
@@ -183,7 +167,7 @@ function HomePage() {
       </section>
 
       {/* ===== ABOUT INTRO ===== */}
-      <section className="relative mx-auto max-w-[1600px] px-6 py-28 md:px-10 md:py-40">
+      <section className="relative mx-auto max-w-[1600px] px-6 pt-12 pb-12 md:px-10 md:pt-20 md:pb-16">
         <SectionNumber label="Quiénes Somos" />
         <div className="mt-12 grid gap-12 md:grid-cols-12 md:gap-16">
           {/* Visual column */}
@@ -221,23 +205,6 @@ function HomePage() {
               </div>
             </WallReveal>
 
-            {/* mini stats */}
-            <div className="mt-6 grid grid-cols-3 divide-x divide-border border border-border">
-              {[
-                { k: "+10", v: "Proyectos" },
-                { k: "05", v: "Servicios" },
-                { k: "BIM", v: "Metodología" },
-              ].map((s) => (
-                <div key={s.v} className="px-3 py-4 text-center">
-                  <div className="font-display text-xl tracking-wide text-primary md:text-2xl">
-                    {s.k}
-                  </div>
-                  <div className="mt-1 text-[9px] uppercase tracking-[0.3em] text-muted-foreground">
-                    {s.v}
-                  </div>
-                </div>
-              ))}
-            </div>
           </div>
 
           {/* Text column */}
@@ -264,9 +231,27 @@ function HomePage() {
               </p>
             </WallReveal>
             <WallReveal delay={0.3}>
+              <div className="mt-10 grid grid-cols-3 divide-x divide-border border border-border">
+                {[
+                  { k: "+10", v: "Proyectos" },
+                  { k: "05", v: "Servicios" },
+                  { k: "BIM", v: "Metodología" },
+                ].map((s) => (
+                  <div key={s.v} className="px-3 py-4 text-center">
+                    <div className="font-display text-xl tracking-wide text-primary md:text-2xl">
+                      {s.k}
+                    </div>
+                    <div className="mt-1 text-[9px] uppercase tracking-[0.3em] text-muted-foreground">
+                      {s.v}
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </WallReveal>
+            <WallReveal delay={0.4}>
               <Link
                 to="/quienes-somos"
-                className="group mt-10 inline-flex items-center gap-3 text-xs uppercase tracking-[0.3em] text-primary"
+                className="group mt-8 inline-flex items-center gap-3 text-xs uppercase tracking-[0.3em] text-primary"
               >
                 Conocer más
                 <span className="h-px w-10 bg-primary transition-all group-hover:w-16" />
@@ -277,7 +262,7 @@ function HomePage() {
       </section>
 
       {/* ===== FEATURED PROJECTS ===== */}
-      <section className="relative bg-background py-28 md:py-40">
+      <section className="relative bg-background pt-12 pb-12 md:pt-16 md:pb-16">
         <div className="mx-auto max-w-[1600px] px-6 md:px-10">
           <div className="mb-16 flex items-end justify-between gap-6">
             <div>
@@ -306,36 +291,39 @@ function HomePage() {
       </section>
 
       {/* ===== SERVICES ===== */}
-      <section className="relative mx-auto max-w-[1600px] px-6 py-28 md:px-10 md:py-40">
+      <section className="relative mx-auto max-w-[1600px] px-6 pt-12 pb-28 md:px-10 md:pt-16 md:pb-40">
         <SectionNumber label="Servicios" />
         <h2 className="mt-6 max-w-3xl font-display text-4xl leading-tight tracking-wide md:text-6xl">
           Un equipo para resolver <span className="text-primary">todo el proceso.</span>
         </h2>
 
-        <ul className="mt-16 divide-y divide-border border-y border-border">
+        <div className="mt-16 grid gap-4 grid-cols-1 sm:grid-cols-3 lg:grid-cols-5">
           {services.map((s, i) => (
-            <motion.li
+            <motion.div
               key={s.n}
-              initial={{ opacity: 0, x: -20 }}
-              whileInView={{ opacity: 1, x: 0 }}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-40px" }}
-              transition={{ duration: 0.7, delay: i * 0.08 }}
+              transition={{ duration: 0.6, delay: i * 0.08 }}
             >
               <Link
                 to="/servicios"
-                className="group grid grid-cols-12 items-center gap-4 py-8 transition-colors hover:bg-secondary md:py-10"
+                className="group flex h-full flex-col gap-6 border border-border bg-secondary/30 p-8 transition-all hover:border-primary/50 hover:bg-secondary"
               >
-                <span className="col-span-12 font-display text-2xl tracking-wide text-foreground md:col-span-6 md:text-4xl">
-                  {s.title}
-                </span>
-                <span className="col-span-12 text-sm text-muted-foreground md:col-span-5">
-                  {s.desc}
-                </span>
-                <ArrowUpRight className="col-span-12 ml-auto hidden h-5 w-5 text-muted-foreground transition-all group-hover:rotate-45 group-hover:text-primary md:col-span-1 md:block" />
+                <div className="flex h-10 w-10 items-center justify-center border border-border text-primary transition-colors group-hover:border-primary">
+                  <s.icon className="h-5 w-5" />
+                </div>
+                <div className="flex flex-1 flex-col gap-3">
+                  <h3 className="font-display text-xl tracking-wide text-foreground">
+                    {s.title}
+                  </h3>
+                  <p className="text-sm leading-relaxed text-muted-foreground">{s.desc}</p>
+                </div>
+                <ArrowUpRight className="ml-auto h-4 w-4 text-muted-foreground transition-all group-hover:rotate-45 group-hover:text-primary" />
               </Link>
-            </motion.li>
+            </motion.div>
           ))}
-        </ul>
+        </div>
       </section>
 
       <LiitBand />

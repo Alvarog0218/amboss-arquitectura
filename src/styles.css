@@ -74,38 +74,38 @@
 :root {
   --radius: 0px;
 
-  /* Dark architectural canvas */
-  --background: oklch(0.14 0.005 145); /* near-black with green tint */
+  /* tono intermedio entre #263b28 y negro */
+  --background: oklch(0.22 0.035 145);
   --foreground: oklch(0.96 0.005 90); /* warm off-white */
 
-  --card: oklch(0.18 0.008 145);
+  --card: oklch(0.37 0.05 145);
   --card-foreground: oklch(0.96 0.005 90);
 
-  --popover: oklch(0.18 0.008 145);
+  --popover: oklch(0.37 0.05 145);
   --popover-foreground: oklch(0.96 0.005 90);
 
   /* #416644 verde acento principal */
-  --primary: oklch(0.49 0.07 145);
+  --primary: oklch(0.56 0.09 145);
   --primary-foreground: oklch(0.98 0.003 90);
 
-  /* #253b28 verde profundo */
-  --deep: oklch(0.32 0.05 145);
+  /* verde profundo para contraste */
+  --deep: oklch(0.22 0.04 145);
 
-  --secondary: oklch(0.22 0.008 145);
+  --secondary: oklch(0.37 0.05 145);
   --secondary-foreground: oklch(0.96 0.005 90);
 
-  --muted: oklch(0.22 0.008 145);
-  --muted-foreground: oklch(0.68 0.01 90); /* #96928f stone */
+  --muted: oklch(0.37 0.05 145);
+  --muted-foreground: oklch(0.78 0.01 90);
 
-  --accent: oklch(0.49 0.07 145);
+  --accent: oklch(0.56 0.09 145);
   --accent-foreground: oklch(0.98 0.003 90);
 
   --destructive: oklch(0.55 0.18 25);
   --destructive-foreground: oklch(0.98 0.003 90);
 
-  --border: oklch(0.28 0.008 145);
-  --input: oklch(0.28 0.008 145);
-  --ring: oklch(0.49 0.07 145);
+  --border: oklch(0.42 0.05 145);
+  --input: oklch(0.42 0.05 145);
+  --ring: oklch(0.56 0.09 145);
 
   /* extras */
   --stone-light: oklch(0.86 0.005 90); /* #d6d6d6 */
@@ -128,6 +128,7 @@
     -webkit-font-smoothing: antialiased;
     text-rendering: optimizeLegibility;
   }
+
 
   ::selection {
     background: var(--color-primary);

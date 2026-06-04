@@ -22,7 +22,7 @@ export function ProjectCard({ project, index = 0, priority }: Props) {
     >
       <Link to="/proyectos/$slug" params={{ slug: project.slug }} className="group block">
         <div className="relative overflow-hidden border border-border bg-card">
-          <div className="relative aspect-[4/5] overflow-hidden">
+          <div className="relative aspect-[4/3] overflow-hidden">
             <img
               src={project.image}
               alt={project.title}

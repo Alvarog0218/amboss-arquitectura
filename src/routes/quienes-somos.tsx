@@ -111,13 +111,13 @@ function EstudioPage() {
         </div>
         <div className="mt-10 md:col-span-5 md:mt-0">
           <WallReveal>
-            <p className="text-lg leading-relaxed text-foreground md:text-xl">
+            <p className="text-2xl leading-relaxed text-foreground md:text-3xl">
               Somos una compañía de arquitectos que presta servicios de diseño, construcción y
               arquitectura para materializar proyectos con orden, funcionalidad y respaldo técnico.
             </p>
           </WallReveal>
           <WallReveal delay={0.1}>
-            <p className="mt-6 text-sm leading-relaxed text-muted-foreground">
+            <p className="mt-6 text-base leading-relaxed text-muted-foreground md:text-lg">
               Nuestro propósito es entender las necesidades del cliente, traducirlas en espacios
               claros y coordinar las especialidades que intervienen en una obra: estructura, redes,
               instalaciones, acabados y documentación.
@@ -223,7 +223,7 @@ function EstudioPage() {
                   className="aspect-[4/5] w-full object-cover transition-all duration-700 group-hover:scale-[1.03]"
                 />
                 <div className="blueprint-grid-fine pointer-events-none absolute inset-1 opacity-0 transition-opacity duration-500 group-hover:opacity-30" />
-                <div className="absolute bottom-5 left-0 right-0 translate-y-full bg-gradient-to-t from-black/80 via-black/40 to-transparent px-6 pb-6 pt-16 transition-transform duration-500 group-hover:translate-y-0">
+                <div className="absolute bottom-0 left-0 right-0 translate-y-full bg-gradient-to-t from-black/80 via-black/40 to-transparent px-6 pb-6 pt-16 transition-transform duration-500 group-hover:translate-y-0">
                   <p className="text-sm leading-relaxed text-bone opacity-90">{m.bio}</p>
                 </div>
               </div>
