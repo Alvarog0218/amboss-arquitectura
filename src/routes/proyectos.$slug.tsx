@@ -1,9 +1,11 @@
-import { createFileRoute, Link, notFound } from "@tanstack/react-router";
+import { createFileRoute, Link, notFound, getRouteApi } from "@tanstack/react-router";
 import { ArrowLeft, ArrowUpRight } from "lucide-react";
 import { motion } from "motion/react";
 
 import { getProject, projects } from "@/data/projects";
 import { SectionNumber } from "@/components/site/SectionNumber";
+
+const routeApi = getRouteApi("/proyectos/$slug");
 
 export const Route = createFileRoute("/proyectos/$slug")({
   head: ({ params }) => {
@@ -57,7 +59,8 @@ export const Route = createFileRoute("/proyectos/$slug")({
 });
 
 function ProjectDetail() {
-  const { project } = Route.useLoaderData();
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const { project } = routeApi.useLoaderData() as any;
   const related = projects.filter((p) => p.slug !== project.slug).slice(0, 3);
 
   return (

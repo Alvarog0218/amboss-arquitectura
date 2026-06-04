@@ -50,16 +50,23 @@ export function LiitBand() {
             <span className="opacity-70">Diseño con carácter.</span>
           </h2>
           <p className="mt-8 max-w-2xl text-base leading-relaxed text-[#211719]/90 md:text-lg">
-            En LIIT ARQUITECTURA transformamos ideas en espacios que se viven, se sienten y se recuerdan.
-            Diseñamos proyectos residenciales y comerciales donde la estética, la funcionalidad y la experiencia se integran para crear lugares con identidad.
+            En LIIT ARQUITECTURA transformamos ideas en espacios que se viven, se sienten y se
+            recuerdan. Diseñamos proyectos residenciales y comerciales donde la estética, la
+            funcionalidad y la experiencia se integran para crear lugares con identidad.
           </p>
           <p className="mt-5 max-w-2xl text-sm leading-relaxed text-[#211719]/70 md:text-base">
-            No diseñamos solo para que un espacio se vea bien. Diseñamos para que funcione mejor, comunique valor y refleje la esencia de quien lo habita, lo usa o lo representa.
+            No diseñamos solo para que un espacio se vea bien. Diseñamos para que funcione mejor,
+            comunique valor y refleje la esencia de quien lo habita, lo usa o lo representa.
           </p>
           <div className="mt-10 grid gap-4 sm:grid-cols-3">
             {liitPillars.map((item) => (
-              <div key={item.title} className="border border-[#4d1f2e]/10 bg-white/30 p-5 transition-colors hover:border-[#3b4d63]/30">
-                <p className="font-['Poppins'] font-semibold text-lg tracking-tight text-[#3b4d63] leading-tight">{item.title}</p>
+              <div
+                key={item.title}
+                className="border border-[#4d1f2e]/10 bg-white/30 p-5 transition-colors hover:border-[#3b4d63]/30"
+              >
+                <p className="font-['Poppins'] font-semibold text-lg tracking-tight text-[#3b4d63] leading-tight">
+                  {item.title}
+                </p>
                 <p className="mt-3 text-xs leading-relaxed text-[#211719]/70">{item.desc}</p>
               </div>
             ))}
@@ -93,7 +100,11 @@ export function LiitBand() {
                 <span>LIIT</span>
               </div>
               <div className="my-16 flex flex-col items-center text-center md:my-20">
-                <img src={liitLogo} alt="LIIT Arquitectura" className="h-auto w-48 md:w-64 brightness-[0.2] invert-0" />
+                <img
+                  src={liitLogo}
+                  alt="LIIT Arquitectura"
+                  className="h-auto w-48 md:w-64 brightness-[0.2] invert-0"
+                />
                 <p className="mt-5 text-[10px] uppercase tracking-[0.4em] text-[#3b4d63] font-semibold">
                   Arquitectura que transforma
                 </p>

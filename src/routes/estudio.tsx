@@ -76,12 +76,18 @@ function EstudioPage() {
       {/* HERO */}
       <section className="relative mx-auto max-w-[1600px] px-6 pb-20 pt-40 md:px-10 md:pb-32 md:pt-48">
         <SectionNumber label="El estudio" />
-        <h1 className="hero-title mt-8 w-full" style={{ fontSize: "clamp(1.75rem, 6.5vw, 5.5rem)", lineHeight: 1.05 }}>
+        <h1
+          className="hero-title mt-8 w-full"
+          style={{ fontSize: "clamp(1.75rem, 6.5vw, 5.5rem)", lineHeight: 1.05 }}
+        >
           <span className="reveal-line">
             <span className="wall-reveal block whitespace-nowrap">Arquitectura</span>
           </span>
           <span className="reveal-line">
-            <span className="wall-reveal block whitespace-nowrap text-primary" style={{ animationDelay: ".15s" }}>
+            <span
+              className="wall-reveal block whitespace-nowrap text-primary"
+              style={{ animationDelay: ".15s" }}
+            >
               que resuelve.
             </span>
           </span>
@@ -106,8 +112,7 @@ function EstudioPage() {
           <WallReveal>
             <p className="text-lg leading-relaxed text-foreground md:text-xl">
               Somos una compañía de arquitectos que presta servicios de diseño, construcción y
-              arquitectura para materializar proyectos con orden, funcionalidad y respaldo
-              técnico.
+              arquitectura para materializar proyectos con orden, funcionalidad y respaldo técnico.
             </p>
           </WallReveal>
           <WallReveal delay={0.1}>
@@ -218,9 +223,7 @@ function EstudioPage() {
                 />
                 <div className="blueprint-grid-fine pointer-events-none absolute inset-1 opacity-0 transition-opacity duration-500 group-hover:opacity-30" />
                 <div className="absolute bottom-5 left-0 right-0 translate-y-full bg-gradient-to-t from-black/80 via-black/40 to-transparent px-6 pb-6 pt-16 transition-transform duration-500 group-hover:translate-y-0">
-                  <p className="text-sm leading-relaxed text-bone opacity-90">
-                    {m.bio}
-                  </p>
+                  <p className="text-sm leading-relaxed text-bone opacity-90">{m.bio}</p>
                 </div>
               </div>
               <div className="mt-4 flex items-end justify-between">
