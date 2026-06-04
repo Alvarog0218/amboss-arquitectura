@@ -18,14 +18,14 @@ export function LiitBand() {
           href="https://liit-arquitectura.vercel.app/"
           target="_blank"
           rel="noopener noreferrer"
-          className="relative group block overflow-hidden border border-[#4d1f2e]/10 bg-[#eaddca] cursor-pointer rounded-lg"
+          className="relative group block overflow-hidden bg-[#eaddca] cursor-pointer rounded-lg"
         >
           {/* Fondo con Imagen y Degradado */}
           <div className="absolute inset-0">
             <img
               src={liitHero}
               alt="Alianza AMBOSS × LIIT"
-              className="h-full w-full object-cover object-[center_30%] opacity-75 transition-transform duration-[1.5s] group-hover:scale-105 mix-blend-multiply saturate-[1.2]"
+              className="h-full w-full object-cover object-[center_70%] opacity-75 transition-transform duration-[1.5s] group-hover:scale-105 mix-blend-multiply saturate-[1.2]"
             />
             <div className="absolute inset-0 bg-gradient-to-r from-[#eaddca] via-[#eaddca]/20 to-transparent" />
             <div className="blueprint-grid-fine pointer-events-none absolute inset-0 opacity-10" />
