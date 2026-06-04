@@ -8,16 +8,17 @@ import sebastianPhoto from "@/assets/SEBASTIAN.webp";
 import { SectionNumber } from "@/components/site/SectionNumber";
 import { WallReveal } from "@/components/site/WallReveal";
 
-export const Route = createFileRoute("/estudio")({
+export const Route = createFileRoute("/quienes-somos")({
   head: () => ({
     meta: [
-      { title: "Estudio · AMBOSS Arquitectos" },
+      { title: "Quiénes Somos · AMBOSS Arquitectos" },
+
       {
         name: "description",
         content:
           "AMBOSS Arquitectos. Arquitectos especializados en diseño, construcción y arquitectura.",
       },
-      { property: "og:title", content: "Estudio · AMBOSS Arquitectos" },
+      { property: "og:title", content: "Quiénes Somos · AMBOSS Arquitectos" },
       { property: "og:description", content: "Misión, visión y forma de trabajo de AMBOSS." },
     ],
   }),
@@ -75,7 +76,7 @@ function EstudioPage() {
     <>
       {/* HERO */}
       <section className="relative mx-auto max-w-[1600px] px-6 pb-20 pt-40 md:px-10 md:pb-32 md:pt-48">
-        <SectionNumber label="El estudio" />
+        <SectionNumber label="Quiénes Somos" />
         <h1
           className="hero-title mt-8 w-full"
           style={{ fontSize: "clamp(1.75rem, 6.5vw, 5.5rem)", lineHeight: 1.05 }}

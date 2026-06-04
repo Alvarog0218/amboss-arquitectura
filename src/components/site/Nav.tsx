@@ -6,7 +6,7 @@ import logoMark from "@/assets/A.png";
 
 const links = [
   { to: "/", label: "Inicio" },
-  { to: "/estudio", label: "Estudio" },
+  { to: "/quienes-somos", label: "Quiénes Somos" },
   { to: "/proyectos", label: "Proyectos" },
   { to: "/servicios", label: "Servicios" },
   { to: "/simulador", label: "Simulador" },

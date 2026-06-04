@@ -30,8 +30,8 @@ export function Footer() {
             </p>
             <ul className="space-y-2 text-sm">
               <li>
-                <Link to="/estudio" className="hover:text-primary transition-colors">
-                  Estudio
+                <Link to="/quienes-somos" className="hover:text-primary transition-colors">
+                  Quiénes Somos
                 </Link>
               </li>
               <li>
