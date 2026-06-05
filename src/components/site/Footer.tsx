@@ -15,7 +15,7 @@ export function Footer() {
               <img src={logoMark} alt="AMBOSS" className="h-8 w-8 object-contain md:h-12 md:w-12" />
               <p className="font-display text-xl leading-[1.1] tracking-tight md:text-3xl lg:text-4xl uppercase">
                 Somos <br />
-                <span className="text-primary">arquitectos.</span>
+                <span className="text-primary">arquitectos</span>
               </p>
             </div>
             <p className="mt-6 max-w-md text-sm leading-relaxed text-muted-foreground">

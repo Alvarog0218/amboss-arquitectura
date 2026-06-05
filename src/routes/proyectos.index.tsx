@@ -48,7 +48,7 @@ function ProyectosPage() {
           </span>
           <span className="reveal-line">
             <span className="wall-reveal block text-primary" style={{ animationDelay: ".15s" }}>
-              reales.
+              reales
             </span>
           </span>
         </h1>
@@ -68,7 +68,7 @@ function ProyectosPage() {
             <button
               key={c}
               onClick={() => setFilter(c)}
-              className={`border px-4 py-2 text-[10px] uppercase tracking-[0.25em] transition-all ${
+              className={`border px-4 py-2 text-[10px] uppercase tracking-[0.25em] ${
                 filter === c
                   ? "border-primary bg-primary text-primary-foreground"
                   : "border-border text-muted-foreground hover:border-primary hover:text-foreground"

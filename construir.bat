@@ -1,0 +1,3 @@
+@echo off
+echo Construyendo el proyecto AMBOSS...
+npm.cmd run build

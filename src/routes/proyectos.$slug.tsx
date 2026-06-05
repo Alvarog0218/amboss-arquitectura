@@ -161,7 +161,7 @@ function ProjectDetail() {
       <section className="mx-auto max-w-[1600px] border-y border-border bg-secondary px-6 py-24 md:px-10 md:py-32">
         <SectionNumber label="Galería" />
         <h2 className="mt-6 font-display text-3xl tracking-wide md:text-5xl">
-          Imágenes <span className="text-primary">del proyecto.</span>
+          Imágenes <span className="text-primary">del proyecto</span>
         </h2>
 
         <motion.div
@@ -196,7 +196,7 @@ function ProjectDetail() {
           <div>
             <SectionNumber label="Continuar viendo" />
             <h2 className="mt-6 font-display text-3xl tracking-wide md:text-5xl">
-              Otros <span className="text-primary">proyectos.</span>
+              Otros <span className="text-primary">proyectos</span>
             </h2>
           </div>
           <Link
