@@ -46,8 +46,8 @@ export function LiitBand() {
               </h2>
 
               <p className="mt-6 text-xl font-medium leading-tight text-[#4d1f2e] md:text-2xl">
-                Espacios con intención. <br />
-                <span className="opacity-60">Diseño con carácter.</span>
+                Espacios con intención <br />
+                <span className="opacity-60">Diseño con carácter</span>
               </p>
 
               <p className="mt-6 max-w-md text-sm leading-relaxed text-[#4d1f2e]/80">

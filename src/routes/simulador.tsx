@@ -101,7 +101,7 @@ function SimulatorPage() {
               </span>
               <span className="reveal-line">
                 <span className="wall-reveal block text-primary" style={{ animationDelay: "0.1s" }}>
-                  proyectos.
+                  proyectos
                 </span>
               </span>
             </h1>

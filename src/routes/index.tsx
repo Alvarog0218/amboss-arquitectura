@@ -104,7 +104,7 @@ function HomePage() {
               </span>
               <span className="reveal-line">
                 <span className="wall-reveal block" style={{ animationDelay: "0.3s" }}>
-                  integral.
+                  integral
                 </span>
               </span>
             </h1>
@@ -213,7 +213,7 @@ function HomePage() {
               <h2 className="font-display text-3xl leading-tight tracking-wide md:text-5xl">
                 Diseño, obra,
                 <br />
-                <span className="text-primary">solución.</span>
+                <span className="text-primary">solución</span>
               </h2>
             </WallReveal>
             <WallReveal delay={0.1}>
@@ -270,7 +270,7 @@ function HomePage() {
               <h2 className="mt-6 font-display text-4xl leading-tight tracking-wide md:text-6xl">
                 Proyectos
                 <br />
-                <span className="text-primary">reales.</span>
+                <span className="text-primary">reales</span>
               </h2>
             </div>
             <Link
@@ -294,7 +294,7 @@ function HomePage() {
       <section className="relative mx-auto max-w-[1600px] px-6 pt-12 pb-28 md:px-10 md:pt-16 md:pb-40">
         <SectionNumber label="Servicios" />
         <h2 className="mt-6 max-w-3xl font-display text-4xl leading-tight tracking-wide md:text-6xl">
-          Un equipo para resolver <span className="text-primary">todo el proceso.</span>
+          Un equipo para resolver <span className="text-primary">todo el proceso</span>
         </h2>
 
         <div className="mt-16 grid gap-4 grid-cols-1 sm:grid-cols-3 lg:grid-cols-5">

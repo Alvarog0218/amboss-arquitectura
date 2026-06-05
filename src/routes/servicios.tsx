@@ -101,7 +101,7 @@ function ServiciosPage() {
           </span>
           <span className="reveal-line">
             <span className="wall-reveal block text-primary" style={{ animationDelay: ".2s" }}>
-              soluciones.
+              soluciones
             </span>
           </span>
         </h1>

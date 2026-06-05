@@ -48,7 +48,7 @@ function ProyectosPage() {
           </span>
           <span className="reveal-line">
             <span className="wall-reveal block text-primary" style={{ animationDelay: ".15s" }}>
-              reales.
+              reales
             </span>
           </span>
         </h1>

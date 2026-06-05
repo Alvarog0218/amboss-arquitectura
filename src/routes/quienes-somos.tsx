@@ -89,7 +89,7 @@ function EstudioPage() {
               className="wall-reveal block whitespace-nowrap text-primary"
               style={{ animationDelay: ".15s" }}
             >
-              que resuelve.
+              que resuelve
             </span>
           </span>
         </h1>
@@ -144,7 +144,7 @@ function EstudioPage() {
       <section className="relative mx-auto max-w-[1600px] px-6 py-28 md:px-10 md:py-32">
         <SectionNumber label="Misión y visión" />
         <h2 className="mt-6 max-w-2xl font-display text-4xl leading-tight tracking-wide md:text-6xl">
-          Una forma clara de <span className="text-primary">acompañar.</span>
+          Una forma clara de <span className="text-primary">acompañar</span>
         </h2>
 
         <ol className="mt-16 space-y-0 border-l border-border">
@@ -173,7 +173,7 @@ function EstudioPage() {
       <section className="mx-auto max-w-[1600px] px-6 py-28 md:px-10">
         <SectionNumber label="Capacidades" />
         <h2 className="mt-6 font-display text-4xl tracking-wide md:text-6xl">
-          Soluciones <span className="text-primary">coordinadas.</span>
+          Soluciones <span className="text-primary">coordinadas</span>
         </h2>
 
         <ul className="mt-16 grid grid-cols-2 gap-px overflow-hidden border border-border bg-border md:grid-cols-4">
@@ -200,7 +200,7 @@ function EstudioPage() {
       <section className="mx-auto max-w-[1600px] px-6 py-28 md:px-10 md:py-32">
         <SectionNumber label="Equipo" />
         <h2 className="mt-6 font-display text-4xl tracking-wide md:text-6xl">
-          Quienes <span className="text-primary">construyen.</span>
+          Quienes <span className="text-primary">construyen</span>
         </h2>
 
         <div className="mt-16 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
